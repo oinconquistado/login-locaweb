@@ -4,3 +4,24 @@ body {
     background-color: #FAFAFC;
     font-family: 'Sora', sans-serif;
 }
+
+ /* colors  */
+
+:root {
+   
+    --black-logo: #2A343E;
+    --pink-logo: #F00843;
+    --cta-pink: #F30168;
+    --primary-text-login: #292D32;
+    --secondary-text-login: #515D74;
+    --primary-white-login: #E6EAF2;
+    --secondary-white-login: #FAFAFC;
+    --primary-white-product: #FFF;
+    --secondary-white-product: #FAFAFC;
+    --primary-text-product: #666;
+    --account-logo: #D9D9D9;
+    --primary-green-button: #10C300;
+    --primary-black-button: #000;
+
+
+}
