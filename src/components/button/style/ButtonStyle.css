@@ -6,14 +6,14 @@ button {
 }
 /* call-to-action */
 .cta {
-    background-color: #f30168;
+    background-color: --cta-pink;
     border-radius: 5px;
-    color: #fff;
+    color: --primary-white;
     text-transform: uppercase;
 }
 /* ghost */
 .ghost {
-    border: 1px solid #000000;
+    border: 1px solid --primary-black;
     border-radius: 5px;
-    color: #000000;
+    color: --primary-black;
 }
