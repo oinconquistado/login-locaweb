@@ -1,19 +1,19 @@
 <script setup lang="ts">
   import { defineProps } from "vue";
-  import { typesOfButtons, sizesOfButtons } from "./interface/ButtonInterface";
+  import {
+    TypesOfButtons,
+    SizesOfButtons,
+    ButtonProps,
+  } from "./interface/ButtonInterface";
   import { initButton, buttonVariant, buttonSize } from "./controller/ButtonController";
 
-  const props = defineProps<{
+  const props: ButtonProps = defineProps<{
     button_msg: string;
-    variant?: typesOfButtons;
-    size?: sizesOfButtons;
+    variant?: TypesOfButtons;
+    size?: SizesOfButtons;
   }>();
 
-  const startButton = async () => {
-    props && initButton(props);
-  };
-
-  startButton();
+  props && initButton(props);
 </script>
 
 <template>
@@ -29,20 +29,5 @@
 </template>
 
 <style scoped>
-  button {
-    display: grid;
-    place-items: center;
-    font-weight: 400;
-  }
-  .cta {
-    background-color: #f30168;
-    border-radius: 5px;
-    color: #fff;
-    text-transform: uppercase;
-  }
-  .ghost {
-    border: 1px solid #000000;
-    border-radius: 5px;
-    color: #000000;
-  }
+  @import "./style/ButtonStyle.css";
 </style>

@@ -1,30 +1,26 @@
-export type typesOfButtons = "cta" | "ghost";
-export type sizesOfButtons = "xs" | "sm" | "md" | "lg" | "xl";
+// Define os tipos possíveis de variantes de botões
+export type TypesOfButtons = "cta" | "ghost";
 
-export interface buttonSizeProps {
+// Define os tamanhos possíveis de botões
+export type SizesOfButtons = "xs" | "sm" | "md" | "lg" | "xl";
+
+// Define a interface para o tamanho do botão
+export interface ButtonSizeProps {
   width: string;
   height: string;
 }
 
-export const buttonMetrics = {
-  xs: {
-    width: "245px",
-    height: "56px",
-  },
-  sm: {
-    width: "248px",
-    height: "56px",
-  },
-  md: {
-    width: "333px",
-    height: "60px",
-  },
-  lg: {
-    width: "551px",
-    height: "60px",
-  },
-  xl: {
-    width: "551px",
-    height: "80px",
-  },
+// Define o tipo para as métricas de botões
+export type ButtonMetrics = {
+  [size in SizesOfButtons]: {
+    width: string;
+    height: string;
+  };
+};
+
+// Define as propriedades que podem ser passadas para um botão
+export type ButtonProps = {
+  button_msg: string; // Mensagem que será exibida no botão
+  variant?: TypesOfButtons | undefined; // Variante do botão, que pode ser cta ou ghost (opcional)
+  size?: SizesOfButtons | undefined; // Tamanho do botão, que pode ser xs, sm, md, lg ou xl (opcional)
 };

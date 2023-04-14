@@ -1,0 +1,19 @@
+/* Estilizações de botão */
+button {
+    display: grid;
+    place-items: center;
+    font-weight: 400;
+}
+/* call-to-action */
+.cta {
+    background-color: #f30168;
+    border-radius: 5px;
+    color: #fff;
+    text-transform: uppercase;
+}
+/* ghost */
+.ghost {
+    border: 1px solid #000000;
+    border-radius: 5px;
+    color: #000000;
+}
