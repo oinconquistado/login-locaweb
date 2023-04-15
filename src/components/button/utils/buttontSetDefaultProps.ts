@@ -4,27 +4,27 @@ import * as Types from "../interface/ButtonInterface";
 const buttonMetrics: Types.ButtonMetrics = {
   // Tamanho: "xs"
   xs: {
-    height: "56px",
+    height: "49.22px",
     width: "245px",
   },
   // Tamanho: "sm"
   sm: {
-    height: "56px",
+    height: "49.22px",
     width: "248px",
   },
   // Tamanho: "md"
   md: {
-    height: "60px",
+    height: "52.73px",
     width: "333px",
   },
   // Tamanho: "lg"
   lg: {
-    height: "60px",
+    height: "52.73px",
     width: "551px",
   },
   // Tamanho: "xl"
   xl: {
-    height: "80px",
+    height: "70.31px",
     width: "551px",
   },
 };
