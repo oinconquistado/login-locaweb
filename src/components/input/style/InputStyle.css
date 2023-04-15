@@ -6,11 +6,8 @@ input {
   background: var(--white-50);
   color: var(--primary-text-login);
   caret-color: var(--rose-600);
-  width: 551px;
-  height: 80px;
   padding: 30px 16px;
   border: 1px solid var(--comet-600-80);
-
   border-radius: 5px;
   font-weight: 400;
   font-size: 16px;
@@ -30,6 +27,7 @@ input:focus {
   border: none;
   outline: var(--rose-600);
   outline-style: solid;
+  margin-top: 4px;
 }
 
 /* Estilizações do Input Error */
