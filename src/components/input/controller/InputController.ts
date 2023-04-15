@@ -1,9 +1,9 @@
 import { InputProps } from "../interface/InputInterface";
-import { treatProps } from "../utils/inputSetDefaultProps";
-import validateProps from "../utils/InputValidateProps";
+import treatInputProps from "../utils/inputSetDefaultProps";
+import validateInputProps from "../utils/InputValidateProps";
 
 // Função principal para inicializar o input
 export const initInput = async (props: InputProps) => {
-  validateProps(props);
-  treatProps(props);
+  validateInputProps(props);
+  treatInputProps(props);
 };

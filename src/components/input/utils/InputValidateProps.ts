@@ -3,7 +3,7 @@ import { InputProps } from "../interface/InputInterface";
 // Esta função continua a validação das propriedades passadas como parâmetro, verificando outros campos relevantes.
 // Em caso de falha, a função lança um erro com uma mensagem de texto específica.
 
-const validateProps = (props: InputProps) => {
+const validateInputProps = (props: InputProps) => {
   // Verifica se a propriedade 'autocomplete' tem um valor válido
   if (
     props.autocomplete &&
@@ -65,4 +65,4 @@ const validateProps = (props: InputProps) => {
     throw new Error("Tab index must be a number");
 };
 
-export default validateProps;
+export default validateInputProps;
