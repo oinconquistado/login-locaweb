@@ -19,21 +19,21 @@
           class="input-email"
           input-type="text"
           label="E-mail"
-          model-value="email"
+          v-model="email"
           placeholder="Seu e-mail"
         />
         <Input
           class="input-password"
-          input-type="text"
+          input-type="password"
           label="Senha"
-          model-value="senha"
+          v-model="senha"
           placeholder="Sua senha"
         />
         <div class="container-lost-password">
           <p class="lost-password">Esqueci minha senha</p>
         </div>
         <div class="container-login-button">
-          <Button button_msg="fazer login" variant="cta" size="" />
+          <Button button_msg="fazer login" variant="cta" size="xl" />
         </div>
       </div>
       <div class="whitout-login">
@@ -60,21 +60,21 @@
     justify-content: center;
     align-items: center;
     width: 176px;
-    height: 77px;
-    margin-bottom: 48px;
+    height: 67.68px;
+    margin-bottom: 28.13px;
   }
 
   .login-box {
     background-color: var(--white-50);
     width: 617px;
-    height: 492px;
-    padding-top: 28px;
+    height: 432.42px;
+    padding-top: 24.61px;
     padding-left: 30px;
   }
   .login-to-your-account {
     font-weight: 700;
     font-size: 28px;
-    line-height: 35px;
+    line-height: 30.76px;
     color: var(--shark-950);
   }
 
@@ -83,44 +83,44 @@
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
-    line-height: 23px;
+    line-height: 20.21px;
     color: var(--shark-950);
-    margin-top: 5px;
-    margin-bottom: 4px;
+    margin-top: 4.39px;
+    margin-bottom: 3.52px;
   }
 
   .input-email,
   .input-password {
-    margin-top: 15px;
+    margin-top: 13.18px;
   }
 
   .container-lost-password {
     display: flex;
     justify-content: flex-end;
     width: 551px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 4.39px;
+    margin-bottom: 4.39px;
     /* border: solid 2px red; */
   }
 
   .lost-password {
     font-weight: 400;
     font-size: 16px;
-    line-height: 20px;
+    line-height: 17.58px;
     text-align: right;
   }
 
   .container-login-button {
-    margin-top: 40px;
+    margin-top: 35.16px;
   }
 
   .whitout-login {
-    margin-top: 32px;
+    margin-top: 28.13px;
   }
   .join {
     color: var(--rose-600);
     text-decoration: underline;
     font-weight: 400;
-    line-height: 23px;
+    line-height: 20.21px;
   }
 </style>

@@ -17,8 +17,9 @@
   <button
     :class="buttonVariant"
     :style="{
-      height: buttonSize.height,
-      width: buttonSize.width,
+      // TODO: fix this
+      height: buttonSize?.height,
+      width: buttonSize?.width,
     }"
   >
     {{ button_msg }}
