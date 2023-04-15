@@ -5,7 +5,11 @@
     SizesOfButtons,
     ButtonProps,
   } from "./interface/ButtonInterface";
-  import { initButton, buttonVariant, buttonSize } from "./controller/ButtonController";
+  import {
+    initButton,
+    buttonVariant,
+    buttonSize,
+  } from "./controller/ButtonController";
 
   const props: ButtonProps = defineProps<{
     button_msg: string;
