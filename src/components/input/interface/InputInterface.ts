@@ -1,33 +1,60 @@
-// Define os tamanhos possíveis de inputs
-export type sizesOfInputs = "login" | "form" | "mobile";
-
-// Define os tipos possíveis de botões
-export type inputTypes = "text" | "password";
-
 // Define os estados possíveis para o autocomplete dos inputs
-export type autocompleteStatus = "on" | "off";
+type autocompleteStatus = "off" | "on";
+
+// define o tipo para as unidades de medida
+type measureProps = {
+  height: string;
+  width: string;
+};
 
 // Define o tipo para as métricas de botões
-export type InputMetrics = {
-  [size in sizesOfInputs]: {
-    width: string;
-    height: string;
-  };
+type inputMetrics = {
+  [size in sizesOfInputs]: measureProps;
 };
+
+// Define os tipos possíveis de botões
+type inputTypes = "password" | "text";
+
+// Define os tamanhos possíveis de inputs
+type sizesOfInputs = "form" | "login" | "mobile";
+
 // Define as propriedades que podem ser passadas para um Input
-export interface InputProps {
-  label: string;
-  modelValue: string;
-  placeholder?: string;
-  inputType: inputTypes;
-  size?: sizesOfInputs;
+interface InputProps {
   autocomplete?: autocompleteStatus;
-  maxLength?: string;
-  minLength?: string;
+  description?: string;
+  descriptionIsVisible?: boolean;
+  inputType: inputTypes;
   isDisabled?: boolean;
   isReadOnly?: boolean;
   isRequired?: boolean;
-  description?: string;
-  descriptionIsVisible?: boolean;
+  label: string;
+  maxLength?: string;
+  minLength?: string;
+  modelValue: string;
+  placeholder?: string;
+  size?: sizesOfInputs;
   tabIndex?: number;
 }
+
+// Definindo os tipos das propriedades tratadas do input
+interface TreatedProps {
+  inputAriaDescribedByProp?: string;
+  inputAriaLabelProp?: string;
+  inputAutocompleteProp?: autocompleteStatus;
+  inputDescriptionVisibilityProp?: boolean;
+  inputLabelIDProp?: string;
+  inputLabelProp?: string;
+  inputTabIndexProp?: number;
+  inputSizeProp?: measureProps;
+  inputTypeProp?: inputTypes;
+}
+
+export type {
+  autocompleteStatus,
+  inputMetrics,
+  InputProps,
+  inputTypes,
+  measureProps,
+  sizesOfInputs,
+  TreatedProps,
+};
