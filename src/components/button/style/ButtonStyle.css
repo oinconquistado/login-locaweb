@@ -1,19 +1,19 @@
 /* Estilizações de botão */
 button {
-    display: grid;
-    place-items: center;
-    font-weight: 400;
+  display: grid;
+  font-weight: 400;
+  place-items: center;
 }
 /* call-to-action */
 .cta {
-    background-color: var(--cta-pink);
-    border-radius: 5px;
-    color: --primary-white;
-    text-transform: uppercase;
+  background-color: var(--cta-pink);
+  border-radius: 5px;
+  color: var(--primary-white);
+  text-transform: uppercase;
 }
 /* ghost */
 .ghost {
-    border: 1px solid var(--primary-black);
-    border-radius: 5px;
-    color: var(--primary-black);
+  border: 1px solid var(--primary-black);
+  border-radius: 5px;
+  color: var(--primary-black);
 }

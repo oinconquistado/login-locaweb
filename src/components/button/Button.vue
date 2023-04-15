@@ -1,16 +1,13 @@
 <script setup lang="ts">
   import { defineProps } from "vue";
-  import {
-    TypesOfButtons,
-    SizesOfButtons,
-    ButtonProps,
-  } from "./interface/ButtonInterface";
-  import { initButton, buttonVariant, buttonSize } from "./controller/ButtonController";
+  import initButton from "./controller/ButtonController";
+  import * as Types from "./interface/ButtonInterface";
+  import { buttonSize, buttonVariant } from "./utils/buttontSetDefaultProps";
 
-  const props: ButtonProps = defineProps<{
+  const props: Types.ButtonProps = defineProps<{
     button_msg: string;
-    variant?: TypesOfButtons;
-    size?: SizesOfButtons;
+    size?: Types.SizesOfButtons;
+    variant?: Types.TypesOfButtons;
   }>();
 
   props && initButton(props);
@@ -20,8 +17,8 @@
   <button
     :class="buttonVariant"
     :style="{
-      width: buttonSize.width,
       height: buttonSize.height,
+      width: buttonSize.width,
     }"
   >
     {{ button_msg }}
