@@ -6,7 +6,7 @@
 
 body {
   /* Cor de background default */
-  background-color: var(--white-50);
+  background-color: var(--whisper-50);
   /* Fonte padrão para todos itens */
   font-family: var(--default-font);
 }
