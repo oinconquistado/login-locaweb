@@ -1,30 +1,9 @@
 /* Google Font Sora */
-@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap");
-
-:root {
-  /* Variáveis de cores  */
-  --account-logo: #d9d9d9;
-  --black-logo: #2a343e;
-  --cta-pink: #f30168;
-  --input-border: #515d7480;
-  --pink-logo: #f00843;
-  --primary-black: #000;
-  --primary-green: #10c300;
-  --primary-text-login: #292d32;
-  --primary-text-product: #666;
-  --primary-white: #fff;
-  --primary-white-login: #e6eaf2;
-  --secondary-text-login: #515d74;
-  --secondary-white: #fafafc;
-  --secondary-white-login: #fafafc;
-
-  /* Variáveis de fonte */
-  --default-font: "Sora", sans-serif;
-}
+@import "./variables.css";
 
 body {
   /* Cor de background default */
-  background-color: var(--primary-white);
+  background-color: var(--white-50);
   /* Fonte padrão para todos itens */
   font-family: var(--default-font);
 }
