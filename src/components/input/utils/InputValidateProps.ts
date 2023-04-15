@@ -65,4 +65,5 @@ const validateInputProps = (props: InputProps) => {
     throw new Error("Tab index must be a number");
 };
 
+// Exporta a função de validação das propriedades do input
 export default validateInputProps;

@@ -49,6 +49,7 @@ interface TreatedProps {
   inputTypeProp?: inputTypes;
 }
 
+// Exportando os tipos
 export type {
   autocompleteStatus,
   inputMetrics,

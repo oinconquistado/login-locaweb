@@ -17,10 +17,12 @@ input {
   margin-top: 2px;
 }
 
+/* Estilizações do Input Placeholder */
 input::placeholder {
   color: var(--secondary-text-login);
 }
 
+/* Estilizações do Input Focus */
 input:hover,
 input:active,
 input:focus {
@@ -29,12 +31,14 @@ input:focus {
   outline-style: solid;
 }
 
+/* Estilizações do Input Error */
 label {
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
 }
 
+/* Estilizações do Input Description */
 .input-description {
   font-weight: 400;
   font-size: 12px;

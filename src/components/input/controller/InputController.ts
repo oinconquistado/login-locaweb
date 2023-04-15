@@ -4,6 +4,8 @@ import validateInputProps from "../utils/InputValidateProps";
 
 // Função principal para inicializar o input
 export const initInput = async (props: InputProps) => {
+  // Validando as propriedades do input
   validateInputProps(props);
+  // Tratando as propriedades do input
   treatInputProps(props);
 };

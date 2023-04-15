@@ -105,5 +105,6 @@ const treatInputProps = async (props: Types.InputProps) => {
   }
 };
 
+// Exportando a função e as propriedades tratadas
 export default treatInputProps;
 export { treatedProps };
