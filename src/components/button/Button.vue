@@ -1,11 +1,8 @@
 <script setup lang="ts">
   import { defineProps } from "vue";
+  import initButton from "./controller/ButtonController";
   import * as Types from "./interface/ButtonInterface";
-  import {
-    initButton,
-    buttonVariant,
-    buttonSize,
-  } from "./controller/ButtonController";
+  import { buttonSize, buttonVariant } from "./utils/buttontSetDefaultProps";
 
   const props: Types.ButtonProps = defineProps<{
     button_msg: string;
