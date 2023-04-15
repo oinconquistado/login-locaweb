@@ -1,4 +1,7 @@
-/* Google Font Sora */
+/*reset css */
+@import "./reset.css";
+
+/* variáveis */
 @import "./variables.css";
 
 body {
