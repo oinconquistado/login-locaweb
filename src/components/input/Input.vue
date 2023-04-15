@@ -48,8 +48,8 @@
       :placeholder="placeholder"
       :required="isRequired"
       :style="{
-        width: treatedProps.inputSizeProp.width,
-        height: treatedProps.inputSizeProp.height,
+        width: treatedProps?.inputSizeProp?.width,
+        height: treatedProps?.inputSizeProp?.height,
       }"
       :tabindex="treatedProps.inputTabIndexProp"
       :type="treatedProps.inputTypeProp"

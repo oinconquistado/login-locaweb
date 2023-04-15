@@ -45,7 +45,7 @@ interface TreatedProps {
   inputLabelIDProp?: string;
   inputLabelProp?: string;
   inputTabIndexProp?: number;
-  inputSizeProp?: measureProps;
+  inputSizeProp?: measureProps | undefined;
   inputTypeProp?: inputTypes;
 }
 

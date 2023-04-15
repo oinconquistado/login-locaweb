@@ -56,7 +56,7 @@ export const treatProps = async (props: Types.InputProps) => {
 
   if (!props.size) {
     // Se não for passado um tamanho, o input recebe o valor "form"
-    treatedProps.inputSizeProp = InputMetrics.form;
+    treatedProps.inputSizeProp = InputMetrics["form"];
   }
   if (props.size) {
     // Se for passado um tamanho, o input recebe o valor passado
