@@ -67,7 +67,6 @@
         {{ description }}
       </p>
     </div>
-    <p>{{ modelValue }}</p>
   </div>
 </template>
 
