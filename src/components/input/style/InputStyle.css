@@ -1,0 +1,43 @@
+/* Estilizações do Input */
+input {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background: var(--primary-white);
+  color: var(--primary-text-login);
+  caret-color: var(--cta-pink);
+  width: 551px;
+  height: 80px;
+  padding: 30px 16px;
+  border: 1px solid var(--input-border);
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  margin-top: 2px;
+}
+
+input::placeholder {
+  color: var(--secondary-text-login);
+}
+
+input:hover,
+input:active,
+input:focus {
+  border: none;
+  outline: var(--cta-pink);
+  outline-style: solid;
+}
+
+label {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.input-description {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: var(--secondary-text-login);
+}
