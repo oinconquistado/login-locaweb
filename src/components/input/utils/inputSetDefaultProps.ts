@@ -23,6 +23,8 @@ const InputMetrics: Types.inputMetrics = {
 let treatedProps: Types.TreatedProps = {};
 
 // Função que trata as propriedades padrões do input
+
+// TODO: remover o async
 const treatInputProps = async (props: Types.InputProps) => {
   // Definindo o autocomplete do input
   if (!props.autocomplete) {
