@@ -44,4 +44,4 @@ const treatButtonProps = async (props: Types.ButtonProps) => {
 };
 
 export default treatButtonProps;
-export { buttonVariant, buttonSize };
+export { buttonVariant, buttonSize, buttonMetrics };

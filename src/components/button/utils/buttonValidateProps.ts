@@ -1,4 +1,4 @@
-import { buttonMetrics } from "../controller/ButtonController";
+import { buttonMetrics } from "../utils/buttontSetDefaultProps";
 import * as Types from "../interface/ButtonInterface";
 
 // Função auxiliar para validar as propriedades do botão
