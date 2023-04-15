@@ -20,10 +20,10 @@ const InputMetrics: Types.inputMetrics = {
 };
 
 // Definindo as propriedades tratadas do input
-export let treatedProps: Types.TreatedProps = {};
+let treatedProps: Types.TreatedProps = {};
 
 // Função que trata as propriedades padrões do input
-export const treatProps = async (props: Types.InputProps) => {
+const treatInputProps = async (props: Types.InputProps) => {
   // Definindo o autocomplete do input
   if (!props.autocomplete) {
     // Se não for passado um autocomplete, o input recebe o valor "on"
@@ -104,3 +104,6 @@ export const treatProps = async (props: Types.InputProps) => {
     treatedProps.inputLabelIDProp = `${props.label}-label`;
   }
 };
+
+export default treatInputProps;
+export { treatedProps };
