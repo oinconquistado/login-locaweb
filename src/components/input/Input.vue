@@ -52,7 +52,7 @@
         height: treatedProps?.inputSizeProp?.height,
       }"
       :tabindex="treatedProps.inputTabIndexProp"
-      :type="treatedProps.inputTypeProp"
+      :type="inputType"
       :value="modelValue"
       @input="
         $emit('update:modelValue', ($event.target as HTMLInputElement).value)
