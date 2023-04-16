@@ -41,14 +41,16 @@
 </script>
 
 <template>
-  <!-- Define o elemento botão -->
-  <button
-    :style="{ height: buttonSize.height, width: buttonSize.width }"
-    :aria-label="button_msg"
-    :class="['button', variant]"
-  >
-    {{ button_msg }}
-  </button>
+  <div>
+    <!-- Define o elemento botão -->
+    <button
+      :style="{ height: buttonSize.height, width: buttonSize.width }"
+      :aria-label="button_msg"
+      :class="['button', variant]"
+    >
+      {{ button_msg }}
+    </button>
+  </div>
 </template>
 
 <!-- Importa o arquivo de estilo CSS -->
