@@ -1,0 +1,15 @@
+@media (max-width: 640px) {
+  .mainbox {
+    width: 400px;
+    padding: 24px;
+  }
+  .mainbox--subtitle {
+    font-size: 14px;
+  }
+  .forgetbox {
+    width: 333px;
+  }
+  .login_container {
+    width: 333px;
+  }
+}

@@ -1,11 +1,33 @@
-<script setup lang="ts">
+<script lang="ts">
+  import { defineComponent, ref, computed } from "vue";
   import Button from "../../components/button/Button.vue";
   import Input from "../../components/input/Input.vue";
-  import { ref } from "vue";
+  import { useWindowSize } from "vue-window-size";
 
-  const email = ref("");
-  const senha = ref("");
+  export default defineComponent({
+    components: {
+      Button,
+      Input,
+    },
+    setup() {
+      const { width } = useWindowSize();
+
+      const responsiveButton = computed(() => {
+        return width.value < 640 ? "xs" : "xl";
+      });
+
+      const email = ref("");
+      const senha = ref("");
+
+      return {
+        responsiveButton,
+        email,
+        senha,
+      };
+    },
+  });
 </script>
+
 <template>
   <div class="login-page">
     <div class="container">
@@ -27,19 +49,25 @@
           label="E-mail"
           v-model="email"
           placeholder="Seu e-mail"
+          size="login"
         />
         <Input
           class="mainbox--input_password"
           input-type="password"
           label="Senha"
           v-model="senha"
+          size="login"
           placeholder="Sua senha"
         />
         <div class="forgetbox">
           <a href="#" class="forgetbox--lost_password">Esqueci minha senha</a>
         </div>
         <div class="login_container">
-          <Button button_msg="fazer login" variant="cta" size="xl" />
+          <Button
+            button_msg="fazer login"
+            variant="cta"
+            :size="responsiveButton"
+          />
         </div>
       </div>
       <div>
@@ -51,6 +79,8 @@
     </div>
   </div>
 </template>
+
 <style>
   @import "./style/LoginPage.css";
+  @import "./style/LoginPageMobile.css";
 </style>
