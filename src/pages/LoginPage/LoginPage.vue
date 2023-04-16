@@ -37,7 +37,9 @@
         </div>
       </div>
       <div class="whitout-login">
-        <p>Ainda não tem login? <a href="" class="join">Cadastre-se</a></p>
+        <p class="whitout-account-text">
+          Ainda não tem conta? <a href="" class="join">Cadastre-se</a>
+        </p>
       </div>
     </div>
   </div>
@@ -61,7 +63,6 @@
     align-items: center;
     width: 176px;
     height: 77px;
-    margin-bottom: 48px;
   }
 
   .login-box {
@@ -70,6 +71,7 @@
     height: 492px;
     padding-top: 28px;
     padding-left: 30px;
+    margin: 32px 0px;
   }
   .login-to-your-account {
     font-weight: 700;
@@ -99,7 +101,7 @@
     justify-content: flex-end;
     width: 551px;
     margin-top: 5px;
-    margin-bottom: 5px;
+
     /* border: solid 2px red; */
   }
 
@@ -111,12 +113,14 @@
   }
 
   .container-login-button {
-    margin-top: 40px;
+    margin-top: 50px;
   }
 
-  .whitout-login {
-    margin-top: 32px;
+  .whitout-account-text {
+    font-size: 18px;
+    line-height: 23px;
   }
+
   .join {
     color: var(--rose-600);
     text-decoration: underline;
