@@ -10,7 +10,11 @@
   <div class="login-page">
     <div class="container">
       <div class="logo-login-page">
-        <img src="../../assets/images/locaweb.svg" alt="logo" />
+        <img
+          src="../../assets/images/locaweb.svg"
+          class="logo-locaweb"
+          alt="logo"
+        />
       </div>
       <div class="login-box">
         <h1 class="login-to-your-account">Entre na sua conta</h1>
@@ -64,6 +68,10 @@
     width: 176px;
     height: 77px;
   }
+  .logo-locaweb {
+    width: 176px;
+    height: 67px;
+  }
 
   .login-box {
     background-color: var(--white-50);
@@ -109,7 +117,6 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
-    text-align: right;
   }
 
   .container-login-button {
