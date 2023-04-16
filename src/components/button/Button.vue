@@ -1,31 +1,57 @@
-<script setup lang="ts">
-  import initButton from "./controller/ButtonController";
+<script lang="ts">
+  // Importa a função defineComponent do Vue
+  import { defineComponent } from "vue";
+  // Importa os tipos de interface do botão
   import * as Types from "./interface/ButtonInterface";
-  import { buttonSize, buttonVariant } from "./utils/buttontSetDefaultProps";
+  // Importa as métricas de tamanho do botão
+  import buttonMetrics from "./data/buttonSizes";
+  // Importa a função de validação das propriedades do botão
+  import validateButtonProps from "./utils/validateButtonProps";
 
-  const props: Types.ButtonProps = defineProps<{
-    button_msg: string;
-    size?: Types.SizesOfButtons;
-    variant?: Types.TypesOfButtons;
-  }>();
-
-  props && initButton(props);
+  // Define o componente Vue
+  export default defineComponent({
+    // Define as propriedades do componente
+    props: {
+      // Mensagem do botão
+      button_msg: {
+        type: String,
+        required: true,
+      },
+      // Tamanho do botão
+      size: {
+        type: String as () => Types.SizesOfButtons,
+        default: "md",
+      },
+      // Variante do botão
+      variant: {
+        type: String as () => Types.TypesOfButtons,
+        default: "cta",
+      },
+    },
+    // Função setup para inicializar o estado do componente
+    setup(props) {
+      // Valida as propriedades do componente
+      validateButtonProps(props);
+      // Obtém o tamanho do botão a partir das métricas de tamanho e da propriedade size
+      const buttonSize = buttonMetrics[props.size];
+      // Retorna o tamanho do botão para que ele possa ser usado no modelo
+      return { buttonSize };
+    },
+  });
 </script>
 
 <template>
+  <!-- Define o elemento botão -->
   <button
-    :class="buttonVariant"
-    :style="{
-      // TODO: fix this
-      height: buttonSize?.height,
-      width: buttonSize?.width,
-    }"
+    :style="{ height: buttonSize.height, width: buttonSize.width }"
     :aria-label="button_msg"
+    :class="['button', variant]"
   >
     {{ button_msg }}
   </button>
 </template>
 
+<!-- Importa o arquivo de estilo CSS -->
 <style scoped>
   @import "./style/ButtonStyle.css";
 </style>
