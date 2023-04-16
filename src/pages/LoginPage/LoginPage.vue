@@ -83,7 +83,12 @@
           />
         </div>
       </div>
-      <div><p>teste</p></div>
+      <div>
+        <p class="whitout_account--text">
+          Ainda não tem conta?
+          <a class="whitout_account--join ." href="#">Cadastre-se</a>
+        </p>
+      </div>
     </div>
   </div>
 </template>
