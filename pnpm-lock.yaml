@@ -4,6 +4,9 @@ dependencies:
   vue:
     specifier: ^3.2.47
     version: 3.2.47
+  vue-window-size:
+    specifier: ^2.0.0
+    version: 2.0.0(vue@3.2.47)
 
 devDependencies:
   '@vitejs/plugin-vue':
@@ -575,6 +578,14 @@ packages:
       '@volar/vue-typescript': 1.2.0
       typescript: 4.9.3
     dev: true
+
+  /vue-window-size@2.0.0(vue@3.2.47):
+    resolution: {integrity: sha512-Bx3O7gC71wWSfoY7XMHY4+sP1YKmXGaWkMtpSLy8JlItr1VVp5US65KPIyOSyZMZD1gcr0abaFuiQy+zL45q8A==}
+    peerDependencies:
+      vue: ^3.0 || ^2.7
+    dependencies:
+      vue: 3.2.47
+    dev: false
 
   /vue@3.2.47:
     resolution: {integrity: sha512-60188y/9Dc9WVrAZeUVSDxRQOZ+z+y5nO2ts9jWXSTkMvayiWxCWOWtBQoYjLeccfXkiiPZWAHcV+WTPhkqJHQ==}
