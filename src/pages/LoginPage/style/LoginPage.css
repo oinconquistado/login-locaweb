@@ -1,0 +1,95 @@
+/* estilo da página de login */
+.login-page {
+  display: grid;
+  height: 100vh;
+  place-items: center;
+}
+
+/* estilo do container da página de login */
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* estilo do container do logo */
+.logobox {
+  align-items: center;
+  display: flex;
+  height: 77px;
+  justify-content: center;
+  width: 176px;
+}
+
+/* estilo do logo */
+.logobox--locaweb {
+  height: 67px;
+  width: 176px;
+}
+
+/* estilo do container do formulário */
+.mainbox {
+  background-color: var(--white-50);
+  height: 492px;
+  margin: 32px 0px;
+  padding-left: 30px;
+  padding-top: 28px;
+  width: 617px;
+}
+
+/* estilo do título do formulário */
+.mainbox--title {
+  color: var(--shark-950);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 35px;
+}
+
+/* estilo do subtítulo do formulário */
+.mainbox--subtitle {
+  color: var(--shark-950);
+  font-size: 18px;
+  line-height: 23px;
+  margin-bottom: 4px;
+  margin-top: 5px;
+}
+
+/* estilo dos inputs */
+.mainbox--input_email,
+.mainbox--input_password {
+  margin-top: 15px;
+}
+
+/* estilo do container esqueci a senha */
+.forgetbox {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 5px;
+  width: 551px;
+}
+/* estilo do texto esqueci a senha */
+.forgetbox--lost_password {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+/* estilo do container do botão login */
+.login_container {
+  margin-top: 50px;
+}
+
+/* estilo do texto "ainda não tem conta" */
+.whitout_account--text {
+  font-size: 18px;
+  line-height: 23px;
+}
+
+/* estilo do texto "Cadastre-se" */
+.whitout_account--join {
+  color: var(--rose-600);
+  font-weight: 400;
+  line-height: 23px;
+  text-decoration: underline;
+}
