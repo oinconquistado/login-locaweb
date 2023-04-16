@@ -23,24 +23,26 @@ const InputMetrics: Types.inputMetrics = {
 let treatedProps: Types.TreatedProps = {};
 
 // Função que trata as propriedades padrões do input
-const treatInputProps = async (props: Types.InputProps) => {
+const treatInputProps = (props: Types.InputProps) => {
   // Definindo o autocomplete do input
   if (!props.autocomplete) {
     // Se não for passado um autocomplete, o input recebe o valor "on"
-    treatedProps.inputAutocompleteProp = "on";
+    treatedProps.inputAutocompleteProp = "off";
   } else {
     // Se for passado um autocomplete, o input recebe o valor passado
     treatedProps.inputAutocompleteProp = props.autocomplete;
   }
 
-  // Definindo o tipo do input
-  if (!props.inputType) {
-    // Se não for passado um tipo, o input recebe o valor "text"
-    treatedProps.inputTypeProp = "text";
-  } else {
-    // Se for passado um tipo, o input recebe o valor passado
-    treatedProps.inputTypeProp = props.inputType;
-  }
+  // // Definindo o tipo do input
+  // if (!props.inputType) {
+  //   // Se não for passado um tipo, o input recebe o valor "text"
+  //   treatedProps.inputTypeProp = "text";
+  // } else {
+  //   // Se for passado um tipo, o input recebe o valor passado
+  //   console.log(props.inputType, "na lógica");
+
+  //   treatedProps.inputTypeProp = props.inputType;
+  // }
 
   // Definindo o tabIndex do input
   if (props.isDisabled) {
