@@ -1,75 +1,112 @@
-<script setup lang="ts">
+<script lang="ts">
+  import { defineComponent } from "vue";
   import * as Types from "./interface/InputInterface";
-  import { initInput } from "./controller/InputController";
-  import { treatedProps } from "./utils/inputSetDefaultProps";
+  import sizeStyles from "./data/inputSizes";
+  import validateInputProps from "./utils/validateInputProps";
 
-  // definindo props para o componente
-  const props: Types.InputProps = defineProps<{
-    autocomplete?: Types.autocompleteStatus;
-    description?: string;
-    descriptionIsVisible?: boolean;
-    inputType: Types.inputTypes;
-    isDisabled?: boolean;
-    isReadOnly?: boolean;
-    isRequired?: boolean;
-    label: string;
-    maxLength?: string;
-    minLength?: string;
-    modelValue: string;
-    placeholder?: string;
-    size?: Types.sizesOfInputs;
-    tabIndex?: number;
-  }>();
-
-  // definindo emmited events para o componente
-  defineEmits(["update:modelValue"]);
-
-  // inicializando as props do componente
-  props && props.label && initInput(props);
+  export default defineComponent({
+    // Define as propriedades do componente
+    props: {
+      autocomplete: {
+        type: String as () => Types.autocompleteStatus,
+        default: "off",
+      },
+      description: {
+        type: String,
+        default: "",
+      },
+      descriptionIsVisible: {
+        type: Boolean,
+        default: false,
+      },
+      inputType: {
+        type: String as () => Types.inputTypes,
+        required: true,
+      },
+      isDisabled: {
+        type: Boolean,
+        default: false,
+      },
+      isReadOnly: {
+        type: Boolean,
+        default: false,
+      },
+      isRequired: {
+        type: Boolean,
+        default: false,
+      },
+      label: {
+        type: String,
+        required: true,
+      },
+      maxLength: {
+        type: String,
+        default: "",
+      },
+      minLength: {
+        type: String,
+        default: "",
+      },
+      modelValue: {
+        type: String,
+        required: true,
+      },
+      placeholder: {
+        type: String,
+        default: "",
+      },
+      size: {
+        type: String as () => Types.sizesOfInputs,
+        default: "form",
+      },
+      tabIndex: {
+        type: Number,
+        default: 0,
+      },
+    },
+    // Define os eventos do componente
+    emits: ["update:modelValue"],
+    // Define as propriedades computadas
+    computed: {
+      // Calcula o estilo do input com base no tamanho passado
+      inputStyle() {
+        return sizeStyles[this.size] || sizeStyles.small;
+      },
+    },
+    created() {
+      validateInputProps(this.$props);
+    },
+  });
 </script>
 
 <template>
   <div>
-    <label
-      :id="treatedProps.inputLabelIDProp"
-      :for="treatedProps.inputLabelProp"
-      >{{ label }}
+    <label :for="label">
+      {{ label }}
     </label>
     <input
-      :aria-describedby="treatedProps.inputAriaDescribedByProp"
-      :aria-labelledby="treatedProps.inputAriaLabelProp"
+      :style="inputStyle"
+      :aria-describedby="description"
+      :aria-labelledby="label"
       :aria-required="isRequired"
-      :autocomplete="treatedProps.inputAutocompleteProp"
+      :autocomplete="autocomplete"
       :disabled="isDisabled"
-      :id="treatedProps.inputLabelProp"
+      :id="label"
       :maxlength="maxLength"
       :minlength="minLength"
-      :name="treatedProps.inputLabelProp"
       :placeholder="placeholder"
       :required="isRequired"
-      :style="{
-        width: treatedProps?.inputSizeProp?.width,
-        height: treatedProps?.inputSizeProp?.height,
-      }"
-      :tabindex="treatedProps.inputTabIndexProp"
+      :tabindex="tabIndex"
       :type="inputType"
       :value="modelValue"
       @input="
         $emit('update:modelValue', ($event.target as HTMLInputElement).value)
       "
     />
-
-    <div :id="treatedProps.inputAriaDescribedByProp">
-      <p
-        class="input-description"
-        :hidden="treatedProps.inputDescriptionVisibilityProp"
-      >
-        {{ description }}
-      </p>
-    </div>
   </div>
 </template>
 
 <style scoped>
+  /* Importa o estilo do componente */
   @import "./style/InputStyle.css";
 </style>
