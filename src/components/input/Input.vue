@@ -57,7 +57,7 @@
       },
       size: {
         type: String as () => Types.sizesOfInputs,
-        default: "form",
+        default: "small",
       },
       tabIndex: {
         type: Number,

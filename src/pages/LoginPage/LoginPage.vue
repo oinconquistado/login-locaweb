@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { defineComponent, ref, computed } from "vue";
+  import { computed, defineComponent, ref } from "vue";
   import Button from "../../components/button/Button.vue";
   import Input from "../../components/input/Input.vue";
   import { useWindowSize } from "vue-window-size";
@@ -10,18 +10,28 @@
       Input,
     },
     setup() {
-      const { width } = useWindowSize();
-
-      const responsiveButton = computed(() => {
-        return width.value < 640 ? "xs" : "xl";
-      });
-
       const email = ref("");
       const senha = ref("");
 
+      // Obtém a largura da janela
+      const { width } = useWindowSize();
+
+      // Define uma propriedade computada para o tamanho responsivo do input
+      const responsiveInput = computed(() => {
+        // Retorna "small" se a largura da janela for menor que 640px e "large" caso contrário
+        return width.value < 640 ? "small" : "large";
+      });
+
+      // Define uma propriedade computada para o tamanho responsivo do botão
+      const responsiveButton = computed(() => {
+        // Retorna "xs" se a largura da janela for menor que 640px e "xl" caso contrário
+        return width.value < 640 ? "md" : "xl";
+      });
+
       return {
-        responsiveButton,
         email,
+        responsiveButton,
+        responsiveInput,
         senha,
       };
     },
@@ -43,38 +53,35 @@
         <p class="mainbox--subtitle">
           Para acessar sua conta, informe e-mail e senha
         </p>
+        <!-- Usa a propriedade computada responsiveInput como valor para a propriedade size do input -->
         <Input
           class="mainbox--input_email"
           input-type="text"
           label="E-mail"
           v-model="email"
           placeholder="Seu e-mail"
-          size="large"
+          :size="responsiveInput"
         />
+        <!-- Usa a propriedade computada responsiveInput como valor para a propriedade size do input -->
         <Input
           class="mainbox--input_password"
           input-type="password"
           label="Senha"
           v-model="senha"
-          size="large"
+          :size="responsiveInput"
           placeholder="Sua senha"
         />
         <div class="forgetbox">
           <a href="#" class="forgetbox--lost_password">Esqueci minha senha</a>
         </div>
         <div class="login_container">
+          <!-- Usa a propriedade computada responsiveButton como valor para a propriedade size do botão -->
           <Button
             button_msg="fazer login"
             variant="cta"
             :size="responsiveButton"
           />
         </div>
-      </div>
-      <div>
-        <p class="whitout_account--text">
-          Ainda não tem conta?
-          <a href="#" class="whitout_account--join">Cadastre-se</a>
-        </p>
       </div>
     </div>
   </div>
