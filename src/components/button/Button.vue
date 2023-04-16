@@ -1,5 +1,4 @@
 <script setup lang="ts">
-  import { defineProps } from "vue";
   import initButton from "./controller/ButtonController";
   import * as Types from "./interface/ButtonInterface";
   import { buttonSize, buttonVariant } from "./utils/buttontSetDefaultProps";
