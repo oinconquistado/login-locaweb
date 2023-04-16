@@ -36,7 +36,7 @@ let buttonVariant: string;
 // Definindo tamanho padrão do botão
 let buttonSize: Types.ButtonSizeProps;
 
-const treatButtonProps = async (props: Types.ButtonProps) => {
+const treatButtonProps = (props: Types.ButtonProps) => {
   // Definindo tamanho do botão de acordo com a prop "size"
   buttonSize = buttonMetrics[props.size ?? "xs"];
 
