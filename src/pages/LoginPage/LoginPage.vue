@@ -49,14 +49,14 @@
           label="E-mail"
           v-model="email"
           placeholder="Seu e-mail"
-          size="login"
+          size="large"
         />
         <Input
           class="mainbox--input_password"
           input-type="password"
           label="Senha"
           v-model="senha"
-          size="login"
+          size="large"
           placeholder="Sua senha"
         />
         <div class="forgetbox">
