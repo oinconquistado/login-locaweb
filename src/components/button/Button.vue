@@ -20,6 +20,7 @@
       height: buttonSize?.height,
       width: buttonSize?.width,
     }"
+    :aria-label="button_msg"
   >
     {{ button_msg }}
   </button>
