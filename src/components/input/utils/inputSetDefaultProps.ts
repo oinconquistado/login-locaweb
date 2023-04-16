@@ -4,17 +4,17 @@ import * as Types from "../interface/InputInterface";
 const InputMetrics: Types.inputMetrics = {
   // Definindo as medidas para o input de tamanho "form"
   form: {
-    height: "52.73px",
+    height: "60px",
     width: "551px",
   },
   // Definindo as medidas para o input de tamanho "login"
   login: {
-    height: "70.31px",
+    height: "80px",
     width: "551px",
   },
   // Definindo as medidas para o input de tamanho "mobile"
   mobile: {
-    height: "52.73px",
+    height: "60px",
     width: "333px",
   },
 };
