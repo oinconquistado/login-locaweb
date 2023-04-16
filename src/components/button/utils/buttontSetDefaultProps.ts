@@ -1,30 +1,31 @@
 import * as Types from "../interface/ButtonInterface";
 
 // Definindo as medidas para cada tamanho de botão
+
 const buttonMetrics: Types.ButtonMetrics = {
   // Tamanho: "xs"
   xs: {
-    height: "49.22px",
+    height: "56px",
     width: "245px",
   },
   // Tamanho: "sm"
   sm: {
-    height: "49.22px",
+    height: "56px",
     width: "248px",
   },
   // Tamanho: "md"
   md: {
-    height: "52.73px",
+    height: "60px",
     width: "333px",
   },
   // Tamanho: "lg"
   lg: {
-    height: "52.73px",
+    height: "60px",
     width: "551px",
   },
   // Tamanho: "xl"
   xl: {
-    height: "70.31px",
+    height: "80px",
     width: "551px",
   },
 };
