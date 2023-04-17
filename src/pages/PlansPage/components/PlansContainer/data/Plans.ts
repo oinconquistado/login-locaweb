@@ -12,7 +12,7 @@ export const plans: Plans = {
       title: "Seu site em servidores",
       title_highlight: " nos Estados Unidos",
       benefits: [
-        "Servidores em nossos data center americanos;",
+        "Servidores em nossos data center americano;",
         "ASP, ASP.NET 2.0/3.0/3.5/ e 4.0/4.5/4.5.1/4.5.2 (medium trust) ou PHP 5.3, 5.4, 5.5, 5.6 e 7.0;",
         "1 usuário de FTP para upload ou download;",
         "1 conta de e-mail profissional;",
