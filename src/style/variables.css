@@ -145,6 +145,22 @@
   --shark-900: #383d41;
   --shark-950: #292d32;
 
+  /* silver */
+
+  --silver-50: #f8f8f8;
+  --silver-100: #f0f0f0;
+  --silver-200: #e4e4e4;
+  --silver-300: #c4c4c4;
+  --silver-400: #b4b4b4;
+  --silver-500: #9a9a9a;
+  --silver-600: #818181;
+  --silver-700: #6a6a6a;
+  --silver-800: #5a5a5a;
+  --silver-900: #4e4e4e;
+  --silver-950: #282828;
+
+  --silver-divider: #c4c4c480;
+
   /* white */
   --white-50: #ffffff;
   --white-100: #efefef;
