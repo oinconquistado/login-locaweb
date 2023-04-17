@@ -3,7 +3,7 @@ input {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  background: var(--white-50);
+  background-color: var(--white-50);
   color: var(--primary-text-login);
   caret-color: var(--rose-600);
   padding: 30px 16px;

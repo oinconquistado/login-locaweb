@@ -33,10 +33,7 @@
   background-color: var(--white-50);
   height: 492px;
   margin: 32px 0px;
-  padding-bottom: 35px;
-  padding-left: 33px;
-  padding-right: 33px;
-  padding-top: 28px;
+  padding: 28px 33px 35px 33px;
   width: 617px;
 }
 
@@ -53,8 +50,7 @@
   color: var(--shark-950);
   font-size: 18px;
   line-height: 23px;
-  margin-bottom: 4px;
-  margin-top: 5px;
+  margin: 5px 0 4px 0;
 }
 
 /* estilo dos inputs */

@@ -18,7 +18,7 @@
 /* estilo do botão "melhor plano" */
 .best_plan {
   align-items: center;
-  background: var(--green-600);
+  background-color: var(--green-600);
   border-radius: 10px;
   display: flex;
   height: 33px;
