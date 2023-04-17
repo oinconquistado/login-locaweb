@@ -1,63 +1,61 @@
+/* Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
 
-
-/*
-  Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
-  - The "symbol *" part is to solve Firefox SVG sprite bug
+The "symbol *" part is to solve Firefox SVG sprite bug
 */
-*:where(:not(iframe, canvas, img, svg, video):not(svg *, symbol *)) {
+*:where(:not(iframe, canvas, img, svg, video):not(svg *, symbol)) {
   all: unset;
   display: revert;
 }
-/* Preferred box-sizing value */
+/* Valor preferido para o box-sizing */
 *,
 *::before,
-*::after {
+::after {
   box-sizing: border-box;
 }
-/* Reapply the pointer cursor for anchor tags */
+/* Reaplicar o cursor pointer para as tags de âncora */
 a {
   cursor: revert;
 }
 body {
- 
- margin: 0;
- padding: 0;
- border: 0;
- font-size: 100%;
- font: inherit;
- vertical-align: baseline;
-
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
-/* Remove list styles (bullets/numbers) */
-ol, ul, menu {
+/* Remover estilos de lista (marcadores/números) */
+ol,
+ul,
+menu {
   list-style: none;
 }
-/* For images to not be able to exceed their container */
+/* Para que as imagens não ultrapassem o tamanho do seu container */
 img {
   max-width: 100%;
 }
-/* removes spacing between cells in tables */
+/*Remover espaçamento entre as células em tabelas */
 table {
   border-collapse: collapse;
 }
-/* revert the 'white-space' property for textarea elements on Safari */
+/* Reverter a propriedade 'white-space' para elementos 'textarea' no Safari */
 textarea {
   white-space: revert;
 }
-/* fix the feature of 'hidden' attribute.
- display:revert; revert to element instead of attribute */
-:where([hidden]){
-  display:none;
+/* Corrigir o atributo 'hidden'.
+display:revert; volta a exibir o elemento em vez de manter como atributo */
+:where([hidden]) {
+  display: none;
 }
-/* revert for bug in Chromium browsers
- - fix for the content editable attribute will work properly. */
-:where([contenteditable]){
+/* Reverter o bug em navegadores Chromium
+corrige o atributo contenteditable para funcionar corretamente. */
+:where([contenteditable]) {
   -moz-user-modify: read-write;
   -webkit-user-modify: read-write;
   overflow-wrap: break-word;
   /* -webkit-line-break: after-white-space; */
 }
-/* apply back the draggable feature - exist only in Chromium and Safari */
+/* Aplicar novamente a propriedade draggable - existente apenas em Chromium e Safari */
 :where([draggable="true"]) {
   -webkit-user-drag: element;
 }
