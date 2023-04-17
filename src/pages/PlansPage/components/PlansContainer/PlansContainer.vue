@@ -37,4 +37,6 @@
 <style scoped>
   /* importação do css */
   @import url("./style/PlansContainer.css");
+  /* importação do css mobile */
+  @import url("./style/PlansContainerMobile.css");
 </style>

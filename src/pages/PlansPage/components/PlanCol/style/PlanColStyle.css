@@ -7,6 +7,12 @@ h5 {
   margin: 20px 0 10px;
 }
 
+/*container do botão de contratar */
+.button_container {
+  display: flex;
+  justify-content: center;
+}
+
 /* coluna de planos */
 .plan_column {
   background-color: var(--white-50);
