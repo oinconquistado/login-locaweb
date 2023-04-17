@@ -1,4 +1,5 @@
 <scrip lang="ts">
+// importação dos componentes e bibliotecas
 import { defineComponent } from "vue";
 
 export default defineComponent({
@@ -26,5 +27,6 @@ export default defineComponent({
   </div>
 </template>
 <style scoped>
+  /* importação do css */
   @import url("./style/PlansHeaderStyle.css");
 </style>
