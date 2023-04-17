@@ -1,7 +1,7 @@
 <script lang="ts">
   import { defineComponent } from "vue";
   import Button from "../../../../components/button/Button.vue";
-  import { Plan } from "./interface/PlanColInterfaces";
+  import { Plan, BenefitsHighlighted } from "./interface/PlanColInterfaces";
 
   export default defineComponent({
     // declaração dos componentes
@@ -66,24 +66,20 @@
     </div>
 
     <!-- descrições do plano -->
-    <div class="plan_benefits">
-      <div class="plan_benefits-title">
-        <h5>
-          {{ sections.plan_benefits.title
-          }}<span class="title_highlight">{{
-            sections.plan_benefits.title_highlight
-          }}</span>
-        </h5>
-      </div>
-      <div class="plan_benefits-items">
-        <p
-          v-for="(benefit, index) in sections.plan_benefits.benefits"
-          :key="index"
-          class="plan_item"
-        >
+    <div class="plan_benefits-items">
+      <template v-for="(benefit, index) in sections.plan_benefits.benefits">
+        <p v-if="typeof benefit === 'string'" :key="index" class="plan_item">
           {{ benefit }}
         </p>
-      </div>
+        <span v-else-if="typeof benefit === 'object'" :key="index + 'obj'">
+          <p class="plan_item">
+            <span class="plan_item--highlighted">
+              {{ (benefit as BenefitsHighlighted).highlight }}
+            </span>
+            {{ (benefit as BenefitsHighlighted).normal }}
+          </p>
+        </span>
+      </template>
     </div>
 
     <!-- suporte -->
