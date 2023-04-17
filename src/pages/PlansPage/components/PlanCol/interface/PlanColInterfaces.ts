@@ -6,11 +6,17 @@ type PlanDetails = {
   description: string[];
 };
 
+// beneficios do plano com destaque
+type BenefitsHighlighted = {
+  highlight: string;
+  normal: string;
+};
+
 // Benefícios do plano
 type PlanBenefits = {
   title: string;
   title_highlight?: string;
-  benefits: string[];
+  benefits: (string | BenefitsHighlighted)[];
 };
 
 // Aplicativos suportados
@@ -54,6 +60,7 @@ export type {
   SupportedApps,
   Migrations,
   ExtraBenefits,
+  BenefitsHighlighted,
   Plan,
   Plans,
 };

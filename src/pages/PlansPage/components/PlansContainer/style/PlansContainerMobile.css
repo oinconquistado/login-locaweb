@@ -1,0 +1,13 @@
+@media (max-width: 750px) {
+  /* muda de coluna para linha */
+  .plans_columns {
+    grid-auto-flow: row;
+    grid-template-columns: none;
+    gap: 25px 0;
+  }
+  /* reposiciona o botão "mais usado" */
+  .best_plan {
+    position: relative;
+    top: 1360px;
+  }
+}
