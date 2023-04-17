@@ -1,0 +1,122 @@
+/* títulos de seções */
+h5 {
+  color: var(--black-500);
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 21px;
+  margin: 20px 0 10px;
+}
+
+/* coluna de planos */
+.plan_column {
+  background-color: var(--white-50);
+  padding: 40px;
+  width: 348px;
+  height: max-content;
+}
+
+/* indicação do plano */
+.plan_indication {
+  border-color: var(--silver-divider);
+  border-style: solid;
+  border-width: 1px 0;
+  height: 82px;
+  margin: 20px 0;
+  padding: 20px 0;
+  width: 265px;
+}
+
+/* texto da indicação do plano */
+.plan_indication--text {
+  color: var(--black-500);
+  font-size: 17px;
+  line-height: 21px;
+  text-align: center;
+}
+
+/* item do plano */
+.plan_item {
+  color: var(--black-500);
+  font-size: 17px;
+  line-height: 21px;
+  padding-top: 10px;
+  width: 250px;
+}
+
+/* marcador do item do plano */
+.plan_item::before {
+  color: var(--black-500);
+  content: url("../../../../../assets/icons/ticksquare.svg");
+  display: inline-block;
+  height: 24px;
+  margin-right: 1px;
+  width: 24px;
+}
+
+/* caixa do preço do plano */
+.plan_price_box {
+  display: grid;
+  place-items: center;
+}
+
+/* Preço do plano */
+.plan-price {
+  color: var(--rose-600);
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 43px;
+  margin-bottom: 13px;
+  margin-top: 21px;
+  text-align: center;
+  height: 43px;
+}
+
+.plan-price::before {
+  bottom: 5px;
+  content: "R$";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  margin: 2px;
+  position: relative;
+}
+.plan-price::after {
+  bottom: 5px;
+  content: "/mês";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  margin: 2px;
+  position: relative;
+}
+.plan-free {
+  color: var(--rose-600);
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 43px;
+  margin-bottom: 13px;
+  margin-top: 21px;
+  text-align: center;
+}
+
+/* Descrição do plano */
+.plan-short-description {
+  color: var(--black-500);
+  font-size: 14px;
+  line-height: 18px;
+  margin: auto auto auto auto;
+  text-align: center;
+}
+
+/* Título do do plano */
+.plan_title {
+  color: var(--black-500);
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 33px;
+  text-align: center;
+}
+
+.title_highlight {
+  text-decoration: underline;
+}
