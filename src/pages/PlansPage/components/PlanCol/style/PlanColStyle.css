@@ -10,9 +10,9 @@ h5 {
 /* coluna de planos */
 .plan_column {
   background-color: var(--white-50);
+  height: max-content;
   padding: 40px;
   width: 348px;
-  height: max-content;
 }
 
 /* indicação do plano */
@@ -64,13 +64,14 @@ h5 {
   color: var(--rose-600);
   font-size: 34px;
   font-weight: 700;
+  height: 43px;
   line-height: 43px;
   margin-bottom: 13px;
   margin-top: 21px;
   text-align: center;
-  height: 43px;
 }
 
+/* R$ do preço do plano */
 .plan-price::before {
   bottom: 5px;
   content: "R$";
@@ -80,6 +81,7 @@ h5 {
   margin: 2px;
   position: relative;
 }
+/* mês do preço do plano */
 .plan-price::after {
   bottom: 5px;
   content: "/mês";
@@ -89,13 +91,14 @@ h5 {
   margin: 2px;
   position: relative;
 }
+
+/* Estilo do plano grátis - sem R$ e /mês */
 .plan-free {
   color: var(--rose-600);
   font-size: 34px;
   font-weight: 700;
   line-height: 43px;
-  margin-bottom: 13px;
-  margin-top: 21px;
+  margin: 21px 0 13px 0;
   text-align: center;
 }
 
@@ -104,7 +107,6 @@ h5 {
   color: var(--black-500);
   font-size: 14px;
   line-height: 18px;
-  margin: auto auto auto auto;
   text-align: center;
 }
 
@@ -117,6 +119,8 @@ h5 {
   text-align: center;
 }
 
-.title_highlight, .plan_item--highlighted {
+/* highlight de items e títulos do plano */
+.title_highlight,
+.plan_item--highlighted {
   text-decoration: underline;
 }

@@ -1,9 +1,7 @@
-// Detalhes do plano
-type PlanDetails = {
+// Aplicativos suportados
+type SupportedApps = {
+  appsList: string[];
   title: string;
-  price: string;
-  indication: string;
-  description: string[];
 };
 
 // beneficios do plano com destaque
@@ -14,38 +12,40 @@ type BenefitsHighlighted = {
 
 // Benefícios do plano
 type PlanBenefits = {
+  benefits: (string | BenefitsHighlighted)[];
   title: string;
   title_highlight?: string;
-  benefits: (string | BenefitsHighlighted)[];
-};
-
-// Aplicativos suportados
-type SupportedApps = {
-  title: string;
-  appsList: string[];
-};
-
-// Migrações
-type Migrations = {
-  title?: string;
-  description?: string;
 };
 
 // Benefícios extras
 type ExtraBenefits = {
-  title: string;
   benefits: string[];
+  title: string;
+};
+
+// Detalhes do plano
+type PlanDetails = {
+  description: string[];
+  indication: string;
+  price: string;
+  title: string;
+};
+
+// Migrações
+type Migrations = {
+  description?: string;
+  title?: string;
 };
 
 // Plano
 type Plan = {
   [x: string]: any;
-  plan_details: PlanDetails;
+  extra_benefits: ExtraBenefits;
+  migrations?: Migrations;
   plan_benefits: PlanBenefits;
+  plan_details: PlanDetails;
   plan_support: string;
   supported_apps: SupportedApps;
-  migrations?: Migrations;
-  extra_benefits: ExtraBenefits;
 };
 
 // Todos os planos
@@ -55,12 +55,12 @@ type Plans = {
 
 // Exportando interfaces
 export type {
-  PlanDetails,
-  PlanBenefits,
-  SupportedApps,
-  Migrations,
-  ExtraBenefits,
   BenefitsHighlighted,
+  ExtraBenefits,
+  Migrations,
   Plan,
+  PlanBenefits,
+  PlanDetails,
   Plans,
+  SupportedApps,
 };

@@ -1,13 +1,14 @@
+/* estiliza caso a tela seja menor que 750px */
 @media (max-width: 750px) {
-  /* muda de coluna para linha */
-  .plans_columns {
-    grid-auto-flow: row;
-    grid-template-columns: none;
-    gap: 25px 0;
-  }
   /* reposiciona o botão "mais usado" */
   .best_plan {
     position: relative;
     top: 1360px;
+  }
+  /* muda o flow do grid de coluna para linha */
+  .plans_columns {
+    gap: 25px 0;
+    grid-auto-flow: row;
+    grid-template-columns: none;
   }
 }

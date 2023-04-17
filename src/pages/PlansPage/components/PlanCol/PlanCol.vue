@@ -1,7 +1,7 @@
 <script lang="ts">
-  import { defineComponent } from "vue";
+  import { BenefitsHighlighted, Plan } from "./interface/PlanColInterfaces";
   import Button from "../../../../components/button/Button.vue";
-  import { Plan, BenefitsHighlighted } from "./interface/PlanColInterfaces";
+  import { defineComponent } from "vue";
 
   export default defineComponent({
     // declaração dos componentes
@@ -22,12 +22,14 @@
 </script>
 
 <template>
+  <!-- coluna do plano -->
   <div class="plan_column">
     <!-- header -->
     <div class="plan_column--header">
       <!-- títulos da coluna do plano -->
       <div class="header-titles">
         <h3 class="plan_title">{{ sections.plan_details.title }}</h3>
+        <!-- preço do plano -->
         <div class="plan_price_box">
           <h1
             :class="[
@@ -67,6 +69,17 @@
 
     <!-- descrições do plano -->
     <div class="plan_benefits-items">
+      <div class="plan_benefits-title">
+        <h5>
+          {{ sections.plan_benefits.title
+          }}<span class="title_highlight">{{
+            sections.plan_benefits.title_highlight
+          }}</span>
+        </h5>
+      </div>
+      <!-- benefits pode ser um string, que vai exibir um item do plano estilizado normal,
+      ou pode ser um objeto com as propriedade "normal" e "highlight", caso seja um objeto,
+      o valor de "highlight"  receberá uma classe de destaque (sublinhado) -->
       <template v-for="(benefit, index) in sections.plan_benefits.benefits">
         <p v-if="typeof benefit === 'string'" :key="index" class="plan_item">
           {{ benefit }}
@@ -85,14 +98,16 @@
     <!-- suporte -->
     <div class="plan_support">
       <div class="plan_support-title">
-        <h5>{{ sections.plan_support }}</h5>
+        <h5 class="plan_support-title--text">{{ sections.plan_support }}</h5>
       </div>
     </div>
 
     <!-- aplicativos disponveis -->
     <div class="supported_apps">
       <div class="supported_apps-title">
-        <h5>{{ sections.supported_apps.title }}</h5>
+        <h5 class="supported_apps-title--text">
+          {{ sections.supported_apps.title }}
+        </h5>
       </div>
       <div class="supported_apps-items">
         <p
@@ -106,9 +121,10 @@
     </div>
 
     <!--migrations-->
+    <!-- somente serão exibidas se sections.migrations existir -->
     <div :v-if="sections.migrations" class="migration">
       <div v-if="sections.migrations" class="migration-title">
-        <h5>
+        <h5 class="migration-title--text">
           {{ sections.migrations && sections.migrations.title }}
         </h5>
       </div>
@@ -119,10 +135,12 @@
       </div>
     </div>
 
-    <!-- benéficios extras -->
+    <!-- benefícios extras -->
     <div class="extra_benefits">
       <div class="extra_benefits-title">
-        <h5>{{ sections.extra_benefits.title }}</h5>
+        <h5 class="extra_benefits-title--text">
+          {{ sections.extra_benefits.title }}
+        </h5>
       </div>
       <div class="extra_benefits-items">
         <p
@@ -136,6 +154,7 @@
     </div>
   </div>
 </template>
+
 <style scoped>
   /* importa o css do componente */
   @import "./style/PlanColStyle.css";
