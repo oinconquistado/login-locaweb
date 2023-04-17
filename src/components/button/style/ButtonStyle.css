@@ -1,5 +1,6 @@
 /* Estilizações de botão */
 button {
+  cursor: pointer;
   display: grid;
   font-weight: 400;
   place-items: center;
