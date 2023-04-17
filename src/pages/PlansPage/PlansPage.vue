@@ -1,13 +1,13 @@
 <script lang="ts">
   import { defineComponent } from "vue";
   import PlansHeader from "./components/PlansHeader/PlansHeader.vue";
-  import PlanContainer from "./components/PlanContainer/PlanContainer.vue";
+  import PlansContainer from "./components/PlansContainer/PlansContainer.vue";
 
   export default defineComponent({
     // declaração dos componentes
     components: {
       PlansHeader,
-      PlanContainer,
+      PlansContainer,
     },
     setup() {
       return {};
@@ -20,6 +20,6 @@
     <!-- header principal -->
     <PlansHeader />
     <!-- container dos planos -->
-    <PlanContainer />
+    <PlansContainer />
   </div>
 </template>
