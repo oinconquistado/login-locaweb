@@ -3,6 +3,8 @@ import LoginPageVue from "../pages/LoginPage/LoginPage.vue";
 import RegistrationPage from "../pages/RegistrationPage/RegistrationPage.vue";
 import PlansPage from "../pages/PlansPage/PlansPage.vue";
 
+// routes
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -22,12 +24,12 @@ const router = createRouter({
       component: PlansPage,
       meta: {
         requiresAuth: false,
-        title: "Plans",
+        title: "Planos",
       },
     },
     {
       path: "/register/:id",
-      name: "Register",
+      name: "Cadastro",
       component: RegistrationPage,
       meta: {
         requiresAuth: false,
@@ -35,6 +37,11 @@ const router = createRouter({
       },
     },
   ],
+});
+
+router.beforeEach((to, from, next) => {
+  document.title = to.name as string;
+  next();
 });
 
 export default router;
