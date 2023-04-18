@@ -4,7 +4,7 @@
   import Button from "../../components/button/Button.vue";
   import Input from "../../components/input/Input.vue";
   import Logo from "../../components/logo/Logo.vue";
-  import { useLoginStore } from "../../stores/useLoginStore";
+  import { useLoginStore } from "@/store/loginStore/loginStore";
 
   export default defineComponent({
     components: {
