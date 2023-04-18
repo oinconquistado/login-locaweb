@@ -56,6 +56,7 @@
       placeholder="Meu site"
       :size="responsiveInput"
       required="true"
+      tooltip="Exatamente igual ao título do seu site."
     />
   </div>
   <!-- divider -->

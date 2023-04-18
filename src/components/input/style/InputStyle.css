@@ -46,3 +46,9 @@ label {
   line-height: 20px;
   color: var(--comet-600);
 }
+
+.input-tooltip {
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--comet-600);
+}

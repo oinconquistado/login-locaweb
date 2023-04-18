@@ -63,6 +63,10 @@
         type: Number,
         default: 0,
       },
+      tooltip: {
+        type: String,
+        default: "",
+      },
     },
     // Define os eventos do componente
     emits: ["update:modelValue"],
@@ -103,6 +107,7 @@
         $emit('update:modelValue', ($event.target as HTMLInputElement).value)
       "
     />
+    <div class="input-tooltip" v-if="tooltip">{{ tooltip }}</div>
   </div>
 </template>
 

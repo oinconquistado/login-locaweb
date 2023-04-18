@@ -42,5 +42,6 @@
     :required="field.required"
     :size="responsiveInput"
     v-model="field.model.value"
+    :tooltip="field.tooltip"
   />
 </template>

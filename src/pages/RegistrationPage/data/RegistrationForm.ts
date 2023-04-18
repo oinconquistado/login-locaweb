@@ -33,6 +33,7 @@ const formFields = [
     placeholder: "Informe sua senha",
     required: true,
     type: "password",
+    tooltip: "A senha deve conter no mínimo 8 caracteres.",
   },
   {
     label: "Confirmar senha",

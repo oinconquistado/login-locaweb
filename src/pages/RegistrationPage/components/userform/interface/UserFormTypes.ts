@@ -8,6 +8,7 @@ interface FormField {
   placeholder: string;
   required: boolean;
   type: string;
+  tooltip?: string;
 }
 
 // export default formFields;
