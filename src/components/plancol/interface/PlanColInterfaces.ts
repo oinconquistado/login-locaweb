@@ -39,6 +39,7 @@ type Migrations = {
 
 // Plano
 type Plan = {
+  plan_id: string;
   [x: string]: any;
   extra_benefits: ExtraBenefits;
   migrations?: Migrations;

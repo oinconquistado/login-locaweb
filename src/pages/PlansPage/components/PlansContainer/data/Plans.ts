@@ -2,6 +2,7 @@ import { Plans } from "../../../../../components/plancol/interface/PlanColInterf
 
 export const plans: Plans = {
   plan1: {
+    plan_id: "plan1",
     plan_details: {
       title: "Hospedagem 1",
       price: "Grátis",
@@ -38,8 +39,9 @@ export const plans: Plans = {
     },
   },
   plan2: {
+    plan_id: "plan2",
     plan_details: {
-      title: "Hospedagem 1",
+      title: "Hospedagem 2",
       price: "499",
       indication: "Ideal para site com mais de 30k de visitas",
       description: ["cobrado mensalmente", "sem taxa de setup"],
@@ -78,8 +80,9 @@ export const plans: Plans = {
     },
   },
   plan3: {
+    plan_id: "plan3",
     plan_details: {
-      title: "Hospedagem 1",
+      title: "Hospedagem 3",
       price: "999",
       indication: "Ideal para quem está começando.",
       description: ["você não paga nada para usar", "sem taxa de setup"],

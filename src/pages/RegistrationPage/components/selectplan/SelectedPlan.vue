@@ -35,16 +35,19 @@
   <div class="plancol_container">
     <!-- container trocar de plano -->
     <div class="change_plan_container">
-      <Button button_msg="Trocar plano" size="xs" variant="ghost" />
+      <router-link :to="`/plans`">
+        <Button button_msg="Trocar plano" size="xs" variant="ghost" />
+      </router-link>
     </div>
     <!-- botão do plano escolhido -->
     <div class="plan_selected_container">
       <p class="plan_selected_container--text">Plano Escolhido</p>
     </div>
     <!-- coluna do plano escolhido -->
+
     <PlanCol
       class="plancol_component"
-      :sections="plans.plan1"
+      :sections="plans[plan]"
       :forcedHeight="'1033px'"
     />
   </div>

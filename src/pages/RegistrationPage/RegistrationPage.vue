@@ -9,10 +9,9 @@
   import RegisterTitleVue from "./components/registertitle/RegisterTitle.vue";
   import SelectedPlan from "./components/selectplan/SelectedPlan.vue";
   import { useRoute } from "vue-router";
-  import { useRegisterStore } from "../../stores/useRegisterStore";
   import { useWindowSize } from "vue-window-size";
+  import { useRegisterStore } from "../../stores/useRegisterStore";
   import FormField from "./interfaces/UserFormTypes";
-  import axios from "axios";
 
   export default defineComponent({
     // declaração dos componentes
@@ -191,7 +190,7 @@
       </div>
 
       <!-- container da coluna de planos -->
-      <SelectedPlan :plans="plans.plan1" />
+      <SelectedPlan :plan="params.id" />
     </div>
   </div>
 </template>

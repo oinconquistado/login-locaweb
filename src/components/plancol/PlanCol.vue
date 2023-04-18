@@ -71,7 +71,9 @@
 
     <!-- botão de ação -->
     <div v-if="forcedHeight === ''" class="button_container">
-      <Button button_msg="Escolher esse plano" variant="cta" size="xs" />
+      <router-link :to="`/register/${sections.plan_id}`">
+        <Button button_msg="Escolher esse plano" variant="cta" size="xs" />
+      </router-link>
     </div>
 
     <!-- descrições do plano -->
