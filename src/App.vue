@@ -1,10 +1,8 @@
 <script setup lang="ts">
-  import RegistrationPage from "./pages/RegistrationPage/RegistrationPage.vue";
-  import LoginPage from "./pages/LoginPage/LoginPage.vue";
-  import PlansPage from "./pages/PlansPage/PlansPage.vue";
+  import { RouterView } from "vue-router";
 </script>
 <template>
-  <RegistrationPage />
+  <RouterView />
 </template>
 
 <style scoped></style>

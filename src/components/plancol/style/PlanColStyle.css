@@ -53,7 +53,7 @@ h5 {
 /* marcador do item do plano */
 .plan_item::before {
   color: var(--black-500);
-  content: url("../../../../../assets/icons/ticksquare.svg");
+  content: url("../../../assets/icons/ticksquare.svg");
   display: inline-block;
   height: 24px;
   margin-right: 1px;

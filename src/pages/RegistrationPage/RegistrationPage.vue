@@ -12,6 +12,7 @@
   import UserForm from "./components/userform/UserForm.vue";
   import UserTerms from "./components/userterms/UserTerms.vue";
   import WebsiteForm from "./components/websiteform/WebsiteForm.vue";
+  import { useRoute } from "vue-router";
 
   export default defineComponent({
     // declaração dos componentes
@@ -29,8 +30,12 @@
       WebsiteForm,
     },
     setup() {
+      const route = useRoute();
+      const { params } = route;
+
       return {
         plans,
+        params,
       };
     },
   });
@@ -59,7 +64,7 @@
       </div>
 
       <!-- container da coluna de planos -->
-      <SelectedPlan :plans="plans.plan1" />
+      <SelectedPlan :plan="params.id" />
     </div>
   </div>
 </template>
