@@ -1,8 +1,5 @@
 <script lang="ts">
-  // importação dos componentes e bibliotecas
   import { defineComponent } from "vue";
-  import Logo from "../logo/Logo.vue";
-  import Slogan from "../slogan/Slogan.vue";
 
   export default defineComponent({
     props: {
@@ -22,18 +19,17 @@
     setup() {
       return {};
     },
-    components: { Logo, Slogan },
   });
 </script>
 <template>
-  <!-- container do logo -->
-  <div class="container__header">
-    <!-- logo da locaweb -->
-    <Logo />
-    <Slogan :title="title" :subtitle="subtitle" :cta="cta" />
+  <!-- chamadas do principal -->
+  <div class="plans_call">
+    <h1>{{ title }}</h1>
+    <h2 class="plans_call--subtitle">{{ subtitle }}</h2>
+    <h2 class="plans_call--action-text">{{ cta }}</h2>
   </div>
 </template>
 <style scoped>
   /* importação do css */
-  @import url("./style/HeaderStyle.css");
+  @import url("./style/SloganStyle.css");
 </style>

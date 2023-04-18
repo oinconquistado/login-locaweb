@@ -20,7 +20,7 @@
   <!-- container principal -->
   <div class="container__logo-plans">
     <!-- header principal -->
-    <Header />
+    <Header subtitle="hospedar o seu site" cta="Escolha o seu plano" />
     <!-- container dos planos -->
     <PlansContainer />
   </div>

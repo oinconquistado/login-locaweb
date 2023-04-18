@@ -12,27 +12,3 @@
   justify-items: center;
   width: 100vw;
 }
-
-/* Chamada de texto */
-.plans_call {
-  font-size: 28px;
-  font-weight: 700;
-  line-height: 35px;
-  margin-top: 43px;
-  text-align: center;
-}
-
-/* Chamada de texto - escolha o seu plano*/
-.plans_call--choose-your-plan--text {
-  font-size: 16px;
-  line-height: 20px;
-  margin-top: 22px;
-  text-align: center;
-  font-weight: 400;
-}
-
-/* Chamada de texto - hospede seu site */
-.plans_call--host-your-site {
-  color: var(--rose-600);
-  text-decoration: underline;
-}
