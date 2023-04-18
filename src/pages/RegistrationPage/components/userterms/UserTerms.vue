@@ -1,9 +1,14 @@
 <script lang="ts">
   import { defineComponent, ref } from "vue";
+  import { useRegisterStore } from "../../../../stores/useRegisterStore";
 
   export default defineComponent({
     setup() {
-      const termsChecked = ref(false);
+      // declaração do store
+      const registerStore = useRegisterStore();
+
+      // declaração do ref para o checkbox de termos de uso
+      const termsChecked = ref(registerStore.termsAccepted);
 
       return { termsChecked };
     },

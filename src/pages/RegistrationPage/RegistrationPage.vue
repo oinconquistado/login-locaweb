@@ -1,5 +1,6 @@
 <script lang="ts">
   import { defineComponent } from "vue";
+  import { plans } from "../PlansPage/components/PlansContainer/data/Plans";
   import Button from "../../components/button/Button.vue";
   import FormDivider from "../../components/formdivider/FormDivider.vue";
   import Header from "../../components/header/Header.vue";
@@ -11,8 +12,6 @@
   import UserForm from "./components/userform/UserForm.vue";
   import UserTerms from "./components/userterms/UserTerms.vue";
   import WebsiteForm from "./components/websiteform/WebsiteForm.vue";
-  import { plans } from "../PlansPage/components/PlansContainer/data/Plans";
-  import formFields from "./data/RegistrationForm";
 
   export default defineComponent({
     // declaração dos componentes
@@ -31,7 +30,6 @@
     },
     setup() {
       return {
-        formFields,
         plans,
       };
     },
@@ -50,7 +48,7 @@
         <!-- formulário de registro -->
         <form class="register-form">
           <!-- formulário do usuário -->
-          <UserForm :formFields="formFields" />
+          <UserForm />
           <!-- formulário do site -->
           <WebsiteForm />
           <!-- termo de uso -->

@@ -1,8 +1,9 @@
 <script lang="ts">
   import { computed, defineComponent, ref } from "vue";
-  import FormDivider from "../../../../components/formdivider/FormDivider.vue";
+  import { useRegisterStore } from "../../../../stores/useRegisterStore";
   import { useWindowSize } from "vue-window-size";
   import Input from "../../../../components/input/Input.vue";
+  import FormDivider from "../../../../components/formdivider/FormDivider.vue";
 
   export default defineComponent({
     // declaração dos componentes
@@ -11,8 +12,11 @@
       Input,
     },
     setup() {
+      // declaração do store
+      const registerStore = useRegisterStore();
+
       // declaração das variáveis
-      const websitename = ref("");
+      const websitename = ref(registerStore.website);
 
       // Obtém a largura da janela
       const { width } = useWindowSize();
