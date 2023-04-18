@@ -5,6 +5,7 @@
   import Slogan from "../slogan/Slogan.vue";
 
   export default defineComponent({
+    // propriedades do header
     props: {
       title: {
         type: String,
@@ -22,6 +23,7 @@
     setup() {
       return {};
     },
+    // importação dos componentes
     components: { Logo, Slogan },
   });
 </script>

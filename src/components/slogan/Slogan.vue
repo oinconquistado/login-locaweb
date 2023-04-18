@@ -3,6 +3,7 @@
 
   export default defineComponent({
     props: {
+      // propriedades do slogan
       title: {
         type: String,
         default: "Você está muito próximo de mudar a forma de",
@@ -24,8 +25,11 @@
 <template>
   <!-- chamadas do principal -->
   <div class="plans_call">
+    <!-- chamada principal -->
     <h1>{{ title }}</h1>
+    <!-- chamada secundária -->
     <h2 class="plans_call--subtitle">{{ subtitle }}</h2>
+    <!-- chamada de ação -->
     <h2 class="plans_call--action-text">{{ cta }}</h2>
   </div>
 </template>
