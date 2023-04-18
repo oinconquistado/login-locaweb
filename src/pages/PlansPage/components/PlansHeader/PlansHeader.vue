@@ -22,7 +22,7 @@ export default defineComponent({
     <div class="plans_call">
       <h1>Você está muito próximo de mudar a forma de</h1>
       <h2 class="plans_call--host-your-site">hospedar seu site</h2>
-      <h2 class="plans_call--choose-your-plan--text">Escolha o seu plano</h2>
+      <!-- <h2 class="plans_call--choose-your-plan--text">Escolha o seu plano</h2> -->
     </div>
   </div>
 </template>

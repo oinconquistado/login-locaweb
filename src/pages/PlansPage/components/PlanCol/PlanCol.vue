@@ -14,6 +14,10 @@
         type: Object as () => Plan,
         required: true,
       },
+      forcedHeight: {
+        type: String,
+        default: "",
+      },
     },
     setup() {
       return {};
@@ -23,7 +27,10 @@
 
 <template>
   <!-- coluna do plano -->
-  <div class="plan_column">
+  <div
+    class="plan_column"
+    :style="{ height: forcedHeight, maxHeight: forcedHeight }"
+  >
     <!-- header -->
     <div class="plan_column--header">
       <!-- títulos da coluna do plano -->
@@ -63,7 +70,7 @@
     </div>
 
     <!-- botão de ação -->
-    <div class="button_container">
+    <div v-if="forcedHeight === ''" class="button_container">
       <Button button_msg="Escolher esse plano" variant="cta" size="xs" />
     </div>
 

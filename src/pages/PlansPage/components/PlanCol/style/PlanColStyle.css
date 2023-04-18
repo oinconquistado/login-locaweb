@@ -19,6 +19,7 @@ h5 {
   height: max-content;
   padding: 40px;
   width: 348px;
+  overflow: hidden;
 }
 
 /* indicação do plano */
