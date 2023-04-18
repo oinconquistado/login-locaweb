@@ -1,6 +1,7 @@
 import { defineStore } from "pinia";
 
-export const useLoginStore = defineStore({
+// This is the store for the login page
+const useLoginStore = defineStore({
   id: "user",
   state: () => ({
     email: "",
@@ -19,3 +20,5 @@ export const useLoginStore = defineStore({
     },
   },
 });
+
+export default useLoginStore;

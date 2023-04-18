@@ -1,10 +1,10 @@
 <script lang="ts">
   import { computed, defineComponent } from "vue";
-  import { useLoginStore } from "@/stores/useLoginStore";
   import { useWindowSize } from "vue-window-size";
   import Button from "@/components/button/Button.vue";
   import Input from "@/components/input/Input.vue";
   import Logo from "@/components/logo/Logo.vue";
+  import useLoginStore from "@/stores/useLoginStore";
 
   export default defineComponent({
     components: {
