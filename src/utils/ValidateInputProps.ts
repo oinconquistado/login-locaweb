@@ -1,6 +1,6 @@
-import { InputProps } from "../interface/InputInterface";
+import { InputProps } from "../types/InputInterface";
 
-const validateInputProps = (props: InputProps) => {
+const ValidateInputProps = (props: InputProps) => {
   // Verifica se a propriedade autocomplete é válida
   if (props.autocomplete && !["off", "on"].includes(props.autocomplete)) {
     throw new Error(
@@ -75,4 +75,4 @@ const validateInputProps = (props: InputProps) => {
   }
 };
 
-export default validateInputProps;
+export default ValidateInputProps;

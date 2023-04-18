@@ -1,8 +1,8 @@
 <script lang="ts">
   import { defineComponent } from "vue";
-  import * as Types from "./interface/InputInterface";
-  import sizeStyles from "./data/inputSizes";
-  import validateInputProps from "@/utils/ValidateButtonProps";
+  import * as Types from "../../types/InputInterface";
+  import sizeStyles from "../../data/inputSizesizes";
+  import ValidateInputProps from "@/utils/ValidateButtonProps";
 
   export default defineComponent({
     // Define as propriedades do componente
@@ -79,7 +79,7 @@
     },
 
     setup() {
-      // validateInputProps(props);
+      // ValidateInputProps(props);
       return {};
     },
   });
