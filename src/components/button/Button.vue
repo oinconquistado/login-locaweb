@@ -14,26 +14,26 @@
     props: {
       // Mensagem do botão
       button_msg: {
-        type: String,
         required: true,
+        type: String,
       },
       // Tamanho do botão
       size: {
-        type: String as () => Types.SizesOfButtons,
         default: "md",
+        type: String as () => Types.SizesOfButtons,
       },
       // Variante do botão
       variant: {
-        type: String as () => Types.TypesOfButtons,
         default: "cta",
+        type: String as () => Types.TypesOfButtons,
       },
     },
     // Função setup para inicializar o estado do componente
     setup(props) {
-      // Valida as propriedades do componente
-      validateButtonProps(props);
       // Obtém o tamanho do botão a partir das métricas de tamanho e da propriedade size
       const buttonSize = computed(() => buttonMetrics[props.size]);
+      // Valida as propriedades do componente
+      validateButtonProps(props);
       // Retorna o tamanho do botão para que ele possa ser usado no modelo
       return { buttonSize };
     },
@@ -44,9 +44,9 @@
   <div>
     <!-- Define o elemento botão -->
     <button
-      :style="{ height: buttonSize.height, width: buttonSize.width }"
       :aria-label="button_msg"
       :class="['button', variant]"
+      :style="{ height: buttonSize.height, width: buttonSize.width }"
     >
       {{ button_msg }}
     </button>
