@@ -6,11 +6,13 @@
   import Button from "../../../../components/button/Button.vue";
   import { useRegisterStore } from "../../../../stores/useRegisterStore";
 
+  type Plan = String | String[];
+
   export default defineComponent({
     props: {
       // plano escolhido
       plan: {
-        type: String,
+        type: String || (Array as () => Plan),
         required: true,
       },
     },
