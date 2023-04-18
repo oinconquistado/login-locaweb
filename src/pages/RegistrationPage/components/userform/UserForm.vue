@@ -1,7 +1,7 @@
 <script lang="ts">
   import { computed, defineComponent } from "vue";
   import { useRegisterStore } from "../../../../stores/useRegisterStore";
-  import FormField from "../../interfaces/UserFormTypes";
+  import FormField from "../../components/userform/interfaces/UserFormTypes";
   import { useWindowSize } from "vue-window-size";
   import Input from "../../../../components/input/Input.vue";
   import FormDivider from "../../../../components/formdivider/FormDivider.vue";
