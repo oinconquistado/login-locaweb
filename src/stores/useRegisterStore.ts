@@ -1,6 +1,7 @@
 import { defineStore } from "pinia";
 
-export const useRegisterStore = defineStore({
+// This is the store for the register page
+const useRegisterStore = defineStore({
   id: "user",
   state: () => ({
     name: "",
@@ -44,3 +45,6 @@ export const useRegisterStore = defineStore({
     },
   },
 });
+
+// Exporta a instância do roteador como padrão, para que possa ser importada em outros arquivos.
+export default useRegisterStore;

@@ -4,7 +4,7 @@
   import { plans } from "../../../PlansPage/components/PlansContainer/data/Plans";
   import PlanCol from "../../../../components/plancol/PlanCol.vue";
   import Button from "../../../../components/button/Button.vue";
-  import { useRegisterStore } from "../../../../stores/useRegisterStore";
+  import useRegisterStore from "@/stores/useRegisterStore";
 
   type Plan = String | String[];
 

@@ -1,43 +1,38 @@
 <script lang="ts">
   import { computed, defineComponent } from "vue";
-  import { useRegisterStore } from "../../../../stores/useRegisterStore";
-  import FormField from "../../components/userform/interfaces/UserFormTypes";
   import { useWindowSize } from "vue-window-size";
-  import Input from "../../../../components/input/Input.vue";
-  import FormDivider from "../../../../components/formdivider/FormDivider.vue";
-  import Button from "../../../../components/button/Button.vue";
+  import Button from "@/components/button/Button.vue";
+  import FormDivider from "@/components/formdivider/FormDivider.vue";
+  import FormField from "@/types/UserFormTypes";
+  import Input from "@/components/input/Input.vue";
+  import useRegisterStore from "@/stores/useRegisterStore";
 
   export default defineComponent({
     components: {
-      Input,
-      FormDivider,
       Button,
+      FormDivider,
+      Input,
     },
 
     setup() {
       // declaração do store
       const registerStore = useRegisterStore();
+
       // Obtém a largura da janela
-      const { width } = useWindowSize();
-      // Define uma propriedade computada para o tamanho responsivo do input
-      const responsiveInput = computed(() => {
-        // Retorna "small" se a largura da janela for menor que 640px e "large" caso contrário
-        return width.value < 640 ? "small" : "medium";
-      });
       const responsiveButton = computed(() => {
         // Retorna "xs" se a largura da janela for menor que 640px e "xl" caso contrário
         return width.value < 640 ? "md" : "xl";
       });
+
+      const responsiveInput = computed(() => {
+        // Retorna "small" se a largura da janela for menor que 640px e "large" caso contrário
+        return width.value > 640 ? "medium" : "small";
+      });
+
+      const { width } = useWindowSize();
+      // Define uma propriedade computada para o tamanho responsivo do input
+
       const formFields: FormField[] = [
-        {
-          label: "Nome completo",
-          value: registerStore.getName,
-          name: "name",
-          placeholder: "Informe seu nome completo",
-          required: true,
-          type: "text",
-          setter: (value: string) => registerStore.setName(value),
-        },
         {
           label: "Celular",
           value: registerStore.getPhone,
@@ -46,6 +41,15 @@
           required: true,
           type: "text",
           setter: (value: string) => registerStore.setPhone(value),
+        },
+        {
+          label: "Confirmar senha",
+          value: registerStore.getConfirmPassword,
+          name: "confirmPassword",
+          placeholder: "Confirme sua senha",
+          required: true,
+          type: "password",
+          setter: (value: string) => registerStore.setConfirmPassword(value),
         },
         {
           label: "E-mail",
@@ -57,6 +61,15 @@
           setter: (value: string) => registerStore.setEmail(value),
         },
         {
+          label: "Nome completo",
+          value: registerStore.getName,
+          name: "name",
+          placeholder: "Informe seu nome completo",
+          required: true,
+          type: "text",
+          setter: (value: string) => registerStore.setName(value),
+        },
+        {
           label: "Senha",
           value: registerStore.getPassword,
           name: "password",
@@ -66,17 +79,8 @@
           tooltip: "A senha deve conter no mínimo 8 caracteres.",
           setter: (value: string) => registerStore.setPassword(value),
         },
-        {
-          label: "Confirmar senha",
-          value: registerStore.getConfirmPassword,
-          name: "confirmPassword",
-          placeholder: "Confirme sua senha",
-          required: true,
-          type: "password",
-          setter: (value: string) => registerStore.setConfirmPassword(value),
-        },
       ];
-      return { formFields, responsiveInput, responsiveButton };
+      return { formFields, responsiveButton, responsiveInput };
     },
   });
 </script>
@@ -88,16 +92,16 @@
 
     <!-- itera sobre os campos do formulário -->
     <Input
-      v-for="(field, index) in formFields"
       :input-type="field.type"
       :key="index"
       :label="field.label"
       :name="field.name"
       :placeholder="field.placeholder"
       :required="field.required"
+      :setter="field.setter"
       :size="responsiveInput"
       :tooltip="field.tooltip"
-      :setter="field.setter"
+      v-for="(field, index) in formFields"
     />
     <!-- divider -->
     <FormDividerrmDivider />
@@ -111,11 +115,11 @@
 
       <!-- input do nome do site -->
       <Input
-        input-type="text"
-        name="WebsiteName"
-        label="Nome do seu site"
-        placeholder="Meu site"
         :size="responsiveInput"
+        input-type="text"
+        label="Nome do seu site"
+        name="WebsiteName"
+        placeholder="Meu site"
         required="true"
         tooltip="Exatamente igual ao título do seu site."
       />
@@ -140,7 +144,7 @@
     <!-- container do botão de registro -->
     <div class="register_container-box_register-button">
       <!-- botão de registro -->
-      <Button button_msg="criar conta" variant="cta" :size="responsiveButton" />
+      <Button button_msg="criar conta" :size="responsiveButton" variant="cta" />
     </div>
   </form>
 </template>

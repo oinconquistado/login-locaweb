@@ -1,7 +1,7 @@
 <script lang="ts">
   import { defineComponent } from "vue";
   import { plans } from "../PlansPage/components/PlansContainer/data/Plans";
-  import { useRegisterStore } from "../../stores/useRegisterStore";
+  import useRegisterStore from "@/stores/useRegisterStore";
   import { useRoute } from "vue-router";
   import Button from "../../components/button/Button.vue";
   import FormDivider from "../../components/formdivider/FormDivider.vue";
