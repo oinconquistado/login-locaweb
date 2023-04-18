@@ -1,7 +1,7 @@
 <script lang="ts">
   // importação dos componentes e bibliotecas
   import { defineComponent } from "vue";
-  import Logo from "../../../../components/logo/Logo.vue";
+  import Logo from "../logo/Logo.vue";
 
   export default defineComponent({
     props: {
@@ -33,5 +33,5 @@
 </template>
 <style scoped>
   /* importação do css */
-  @import url("./style/PlansHeaderStyle.css");
+  @import url("./style/HeaderStyle.css");
 </style>
