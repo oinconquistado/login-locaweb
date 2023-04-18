@@ -2,11 +2,11 @@
   // Importa a função defineComponent do Vue
   import { computed, defineComponent } from "vue";
   // Importa os tipos de interface do botão
-  import * as Types from "./interface/ButtonInterface";
+  import * as Types from "@/types/ButtonInterface";
   // Importa as métricas de tamanho do botão
-  import buttonMetrics from "./data/buttonSizes";
+  import buttonMetrics from "@/data/buttonSizes";
   // Importa a função de validação das propriedades do botão
-  import validateButtonProps from "./utils/validateButtonProps";
+  import validateButtonProps from "@/utils/validateButtonProps";
 
   // Define o componente Vue
   export default defineComponent({
@@ -55,5 +55,5 @@
 
 <!-- Importa o arquivo de estilo CSS -->
 <style scoped>
-  @import "./style/ButtonStyle.css";
+  @import "@/style/ButtonStyle.css";
 </style>

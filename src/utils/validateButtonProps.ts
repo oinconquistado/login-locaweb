@@ -1,4 +1,4 @@
-import * as Types from "../interface/ButtonInterface";
+import * as Types from "../types/ButtonInterface";
 
 /**
  * Valida as propriedades de um componente de botão.
