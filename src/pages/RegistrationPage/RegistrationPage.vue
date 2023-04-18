@@ -90,7 +90,7 @@
 </script>
 <template>
   <div class="registration-page">
-    <PlansHeader />
+    <PlansHeader subtitle="vender on-line" />
     <div class="register_container">
       <div class="register_container-box_register">
         <!-- títulos da página de registro -->
@@ -167,15 +167,18 @@
 
       <!-- plano escolhido -->
       <div class="plancol_container">
+        <!-- container trocar de plano -->
+        <div class="change_plan_container">
+          <Button button_msg="Trocar plano" size="xs" variant="ghost" />
+        </div>
+        <div class="plan_selected_container">
+          <p class="plan_selected_container--text">Plano Escolhido</p>
+        </div>
         <PlanCol
           class="plancol_component"
           :sections="plans.plan1"
           :forcedHeight="'1033px'"
         />
-        <!-- container trocar de plano -->
-        <div class="change_plan_container">
-          <Button button_msg="Trocar plano" size="xs" variant="ghost" />
-        </div>
       </div>
     </div>
   </div>
