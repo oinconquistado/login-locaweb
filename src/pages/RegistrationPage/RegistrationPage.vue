@@ -4,7 +4,7 @@
   import Button from "../../components/button/Button.vue";
   import Input from "../../components/input/Input.vue";
   import PlanCol from "../PlansPage/components/PlanCol/PlanCol.vue";
-  import PlansHeader from "../PlansPage/components/PlansHeader/PlansHeader.vue";
+  import Header from "../../components/header/Header.vue";
   import { useWindowSize } from "vue-window-size";
   export default defineComponent({
     // declaração dos componentes
@@ -12,7 +12,7 @@
       Button,
       Input,
       PlanCol,
-      PlansHeader,
+      Header,
     },
     setup() {
       // declaração das variáveis
@@ -90,7 +90,7 @@
 </script>
 <template>
   <div class="registration-page">
-    <PlansHeader subtitle="vender on-line" />
+    <Header subtitle="vender on-line" />
     <div class="register_container">
       <div class="register_container-box_register">
         <!-- títulos da página de registro -->
