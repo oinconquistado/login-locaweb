@@ -2,7 +2,7 @@
   import { defineComponent } from "vue";
   import * as Types from "./interface/InputInterface";
   import sizeStyles from "./data/inputSizes";
-  import validateInputProps from "./utils/validateInputProps";
+  import validateInputProps from "@/utils/validateButtonProps";
 
   export default defineComponent({
     // Define as propriedades do componente
@@ -77,8 +77,10 @@
         return sizeStyles[this.size] || sizeStyles.small;
       },
     },
-    created() {
-      // validateInputProps(this.$props);
+
+    setup() {
+      // validateInputProps(props);
+      return {};
     },
   });
 </script>
