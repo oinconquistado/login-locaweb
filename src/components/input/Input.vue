@@ -2,7 +2,7 @@
   import { defineComponent } from "vue";
   import * as Types from "./interface/InputInterface";
   import sizeStyles from "./data/inputSizes";
-  import validateInputProps from "@/utils/validateButtonProps";
+  import validateInputProps from "@/utils/ValidateButtonProps";
 
   export default defineComponent({
     // Define as propriedades do componente
