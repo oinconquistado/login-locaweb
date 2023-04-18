@@ -1,0 +1,19 @@
+/* UserTerms */
+.user_terms {
+  align-items: center;
+  display: flex;
+  height: 40px;
+}
+/* checkbox */
+.checkbox {
+  border: 1.6666px solid var(--rose-600);
+  border-radius: 30%;
+  display: inline-block;
+  height: 16px;
+  margin-right: 12.46px;
+  width: 16px;
+}
+/* checkbox checado */
+.checkbox:checked {
+  background-color: var(--rose-600);
+}

@@ -1,0 +1,41 @@
+.change_plan_container {
+  align-items: end;
+  align-self: self-end;
+  background: linear-gradient(
+    180deg,
+    rgba(2, 0, 36, 0) 0%,
+    var(--white-50) 70%
+  );
+  display: grid;
+  height: 300px;
+  justify-items: center;
+  padding: 30px 35px;
+  position: absolute;
+  width: inherit;
+  z-index: 1;
+}
+
+.plan_selected_container {
+  align-items: center;
+  background: var(--black-950);
+  border-radius: 10px;
+  display: flex;
+  height: 33px;
+  justify-content: center;
+  position: absolute;
+  top: 290px;
+  width: 179px;
+  z-index: 2;
+}
+
+.plan_selected_container--text {
+  color: var(--white-50);
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.plancol_container {
+  display: grid;
+  justify-items: center;
+}

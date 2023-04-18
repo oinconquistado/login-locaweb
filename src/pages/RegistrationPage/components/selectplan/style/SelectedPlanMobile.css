@@ -1,0 +1,27 @@
+@media (max-width: 950px) {
+  /* container do botão trocar de plano */
+  .change_plan_container {
+    background: var(--white-50);
+    height: 100px;
+    width: 90vw;
+  }
+  /* container do botão trocar de plano */
+  .plan_selected_container {
+    top: 290px;
+  }
+  .plancol_container {
+    grid-row: 1;
+    width: 90vw;
+  }
+  .plancol_component {
+    height: 305px !important;
+    overflow: hidden;
+    width: 90vw;
+  }
+
+  @media (max-width: 500px) {
+    .plan_selected_container {
+      top: 330px;
+    }
+  }
+}

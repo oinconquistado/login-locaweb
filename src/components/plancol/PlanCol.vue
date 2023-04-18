@@ -1,6 +1,6 @@
 <script lang="ts">
   import { BenefitsHighlighted, Plan } from "./interface/PlanColInterfaces";
-  import Button from "../../../../components/button/Button.vue";
+  import Button from "../button/Button.vue";
   import { defineComponent } from "vue";
 
   export default defineComponent({

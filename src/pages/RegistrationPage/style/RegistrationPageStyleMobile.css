@@ -1,0 +1,16 @@
+/* regra de media query para dispositivos com largura máxima de 950px */
+@media (max-width: 950px) {
+  /* container do formulário de registro */
+  .register_container {
+    display: grid;
+    gap: 20px;
+    grid-auto-flow: row;
+    margin: 44px 0 46px;
+    place-items: center;
+    width: 90vw;
+  }
+  /* container do formulário */
+  .register_container-box_register {
+    width: 90%;
+  }
+}
