@@ -8,7 +8,7 @@ import * as Types from "../types/ButtonTypes";
  * @param props.size - O tamanho do botão.
  * @param props.variant - A variante do botão.
  */
-const validateButtonProps = (props: {
+const ValidateButtonProps = (props: {
   button_msg: string;
   size: Types.SizesOfButtons;
   variant: Types.TypesOfButtons;
@@ -41,4 +41,4 @@ const validateButtonProps = (props: {
   }
 };
 
-export default validateButtonProps;
+export default ValidateButtonProps;

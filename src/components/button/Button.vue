@@ -6,7 +6,7 @@
   // Importa as métricas de tamanho do botão
   import buttonMetrics from "@/data/buttonSizes";
   // Importa a função de validação das propriedades do botão
-  import validateButtonProps from "@/utils/validateButtonProps";
+  import ValidateButtonProps from "@/utils/ValidateButtonProps";
 
   // Define o componente Vue
   export default defineComponent({
@@ -33,7 +33,7 @@
       // Obtém o tamanho do botão a partir das métricas de tamanho e da propriedade size
       const buttonSize = computed(() => buttonMetrics[props.size]);
       // Valida as propriedades do componente
-      validateButtonProps(props);
+      ValidateButtonProps(props);
       // Retorna o tamanho do botão para que ele possa ser usado no modelo
       return { buttonSize };
     },
