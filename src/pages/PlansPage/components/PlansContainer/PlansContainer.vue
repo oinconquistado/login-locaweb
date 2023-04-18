@@ -1,8 +1,8 @@
 <script lang="ts">
   // importações
   import { defineComponent } from "vue";
-  import PlanCol from "../../../../components/plancol/PlanCol.vue";
-  import { plans } from "../../../../data/Plansdata/Plans";
+  import { plans } from "@/data/Plans";
+  import PlanCol from "@/components/plancol/PlanCol.vue";
 
   export default defineComponent({
     // declaração dos componentes
