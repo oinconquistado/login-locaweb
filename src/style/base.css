@@ -1,8 +1,8 @@
 /*reset css */
-@import "./reset.css";
+@import "reset.css";
 
 /* variáveis */
-@import "./variables.css";
+@import "variables.css";
 
 body {
   /* Cor de background default */
