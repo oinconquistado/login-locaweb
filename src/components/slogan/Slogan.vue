@@ -5,16 +5,16 @@
     props: {
       // propriedades do slogan
       title: {
-        type: String,
         default: "Você está muito próximo de mudar a forma de",
+        type: String,
       },
       subtitle: {
-        type: String,
         default: "",
+        type: String,
       },
       cta: {
-        type: String,
         default: "",
+        type: String,
       },
     },
     setup() {
