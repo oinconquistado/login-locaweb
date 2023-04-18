@@ -1,6 +1,8 @@
 <script lang="ts">
-  import { defineComponent, computed, ref } from "vue";
+  import { defineComponent } from "vue";
   import { plans } from "../PlansPage/components/PlansContainer/data/Plans";
+  import { useRegisterStore } from "../../stores/useRegisterStore";
+  import { useRoute } from "vue-router";
   import Button from "../../components/button/Button.vue";
   import FormDivider from "../../components/formdivider/FormDivider.vue";
   import Header from "../../components/header/Header.vue";
@@ -8,8 +10,6 @@
   import PlanCol from "../../components/plancol/PlanCol.vue";
   import RegisterTitleVue from "./components/registertitle/RegisterTitle.vue";
   import SelectedPlan from "./components/selectplan/SelectedPlan.vue";
-  import { useRoute } from "vue-router";
-  import { useRegisterStore } from "../../stores/useRegisterStore";
   import UserForm from "./components/userform/UserForm.vue";
 
   export default defineComponent({
@@ -57,7 +57,7 @@
         <UserForm />
       </div>
       <!-- container da coluna de planos -->
-      <SelectedPlan :plan="params.id" />
+      <SelectedPlan :plan="params.id as string" />
     </div>
   </div>
 </template>
