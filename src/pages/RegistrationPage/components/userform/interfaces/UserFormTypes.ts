@@ -7,7 +7,7 @@ interface FormField {
   name: string;
   placeholder: string;
   required: boolean;
-  type: any;
+  type: inputTypes;
   tooltip?: string;
   setter: (value: string) => void;
 }
