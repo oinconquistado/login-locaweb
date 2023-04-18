@@ -2,11 +2,13 @@
   import { defineComponent } from "vue";
 
   export default defineComponent({
+    // importação dos componentes e bibliotecas
     setup() {
       return {};
     },
   });
 </script>
+
 <template>
   <!-- container do logo -->
   <div class="container__logo-plans--logobox">
@@ -18,6 +20,7 @@
     />
   </div>
 </template>
+
 <style scoped>
   /* importação do css */
   @import url("./style/LogoStyle.css");
