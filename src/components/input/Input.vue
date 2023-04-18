@@ -47,10 +47,7 @@
         type: String,
         default: "",
       },
-      modelValue: {
-        type: String,
-        required: true,
-      },
+
       placeholder: {
         type: String,
         default: "",
@@ -67,9 +64,12 @@
         type: String,
         default: "",
       },
+      setter: {
+        type: Function,
+        default: () => {},
+      },
     },
-    // Define os eventos do componente
-    emits: ["update:modelValue"],
+
     // Define as propriedades computadas
     computed: {
       // Calcula o estilo do input com base no tamanho passado
@@ -78,7 +78,7 @@
       },
     },
     created() {
-      validateInputProps(this.$props);
+      // validateInputProps(this.$props);
     },
   });
 </script>
@@ -102,15 +102,13 @@
       :required="isRequired"
       :tabindex="tabIndex"
       :type="inputType"
-      :value="modelValue"
-      @input="
-        $emit('update:modelValue', ($event.target as HTMLInputElement).value)
+      @input="(e: Event) => {
+        setter((e.target as HTMLInputElement).value);} 
       "
     />
-    <div class="input-tooltip" v-if="tooltip">{{ tooltip }}</div>
+    <p>{{ tooltip }}</p>
   </div>
 </template>
-
 <style scoped>
   /* Importa o estilo do componente */
   @import "./style/InputStyle.css";

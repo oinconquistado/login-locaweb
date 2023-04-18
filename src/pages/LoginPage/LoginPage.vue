@@ -15,8 +15,6 @@
 
     setup() {
       const loginStore = useLoginStore();
-      const email = ref(loginStore.email);
-      const password = ref(loginStore.password);
 
       // Obtém a largura da janela
       const { width } = useWindowSize();
@@ -35,10 +33,8 @@
 
       return {
         loginStore,
-        email,
         responsiveButton,
         responsiveInput,
-        password,
       };
     },
   });
@@ -58,18 +54,20 @@
           class="mainbox--input_email"
           input-type="text"
           label="E-mail"
-          v-model="email"
+          :value="loginStore.getEmail"
           placeholder="Seu e-mail"
           :size="responsiveInput"
+          @input="loginStore.setEmail($event.target.value)"
         />
         <!-- Usa a propriedade computada responsiveInput como valor para a propriedade size do input -->
         <Input
           class="mainbox--input_password"
           input-type="password"
           label="Senha"
-          v-model="password"
+          :value="loginStore.getPassword"
           :size="responsiveInput"
           placeholder="Sua senha"
+          @input="loginStore.setPassword($event.target.value)"
         />
         <div class="forgetbox">
           <a href="#" class="forgetbox--lost_password">Esqueci minha senha</a>

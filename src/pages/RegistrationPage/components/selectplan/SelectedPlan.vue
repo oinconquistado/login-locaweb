@@ -4,6 +4,7 @@
   import { plans } from "../../../PlansPage/components/PlansContainer/data/Plans";
   import PlanCol from "../../../../components/plancol/PlanCol.vue";
   import Button from "../../../../components/button/Button.vue";
+  import { useRegisterStore } from "../../../../stores/useRegisterStore";
 
   export default defineComponent({
     props: {
@@ -19,7 +20,10 @@
       Button,
     },
     setup() {
+      // declaração do store
+      const registerStore = useRegisterStore();
       return {
+        registerStore,
         plans,
       };
     },

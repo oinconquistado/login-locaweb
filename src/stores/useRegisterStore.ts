@@ -11,6 +11,15 @@ export const useRegisterStore = defineStore({
     website: "",
     termsAccepted: false,
   }),
+  getters: {
+    getName: (state) => state.name,
+    getPhone: (state) => state.phone,
+    getEmail: (state) => state.email,
+    getPassword: (state) => state.password,
+    getConfirmPassword: (state) => state.confirmPassword,
+    getWebsite: (state) => state.website,
+    getTermsAccepted: (state) => state.termsAccepted,
+  },
   actions: {
     setName(name: string) {
       this.name = name;

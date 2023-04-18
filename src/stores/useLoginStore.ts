@@ -6,6 +6,10 @@ export const useLoginStore = defineStore({
     email: "",
     password: "",
   }),
+  getters: {
+    getEmail: (state) => state.email,
+    getPassword: (state) => state.password,
+  },
   actions: {
     setEmail(email: string) {
       this.email = email;
