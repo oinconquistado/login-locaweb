@@ -1,6 +1,7 @@
 <script lang="ts">
   // importação dos componentes e bibliotecas
   import { defineComponent } from "vue";
+  import Logo from "../../../../components/logo/Logo.vue";
 
   export default defineComponent({
     props: {
@@ -12,18 +13,14 @@
     setup() {
       return {};
     },
+    components: { Logo },
   });
 </script>
 <template>
   <!-- container do logo -->
   <div class="container__header">
-    <div class="container__logo-plans--logobox">
-      <img
-        src="../../../../assets/images/locaweb.svg"
-        class="container__logo-plans--logobox--locaweb"
-        alt="Logo da Locaweb"
-      />
-    </div>
+    <!-- logo da locaweb -->
+    <Logo />
 
     <!-- chamadas do principal -->
     <div class="plans_call">

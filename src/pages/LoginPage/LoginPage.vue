@@ -3,11 +3,13 @@
   import Button from "../../components/button/Button.vue";
   import Input from "../../components/input/Input.vue";
   import { useWindowSize } from "vue-window-size";
+  import Logo from "../../components/logo/Logo.vue";
 
   export default defineComponent({
     components: {
       Button,
       Input,
+      Logo,
     },
     setup() {
       const email = ref("");
@@ -41,13 +43,7 @@
 <template>
   <div class="login-page">
     <div class="container">
-      <div class="logobox">
-        <img
-          src="../../assets/images/locaweb.svg"
-          class="logobox--locaweb"
-          alt="Logo da Locaweb"
-        />
-      </div>
+      <Logo />
       <div class="mainbox">
         <h1 class="mainbox--title">Entre na sua conta</h1>
         <p class="mainbox--subtitle">

@@ -1,0 +1,12 @@
+/* Caixa da logo */
+.container__logo-plans--logobox {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 176px;
+}
+/* estilo do logo */
+.container__logo-plans--logobox--locaweb {
+  height: 67px;
+  width: 176px;
+}

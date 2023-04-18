@@ -13,21 +13,6 @@
   justify-content: center;
 }
 
-/* estilo do container do logo */
-.logobox {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  height: 67px;
-  width: 176px;
-}
-
-/* estilo do logo */
-.logobox--locaweb {
-  height: 67px;
-  width: 176px;
-}
-
 /* estilo do container do formulário */
 .mainbox {
   background-color: var(--white-50);
