@@ -1,10 +1,10 @@
 <script lang="ts">
-  import { computed, defineComponent, ref } from "vue";
+  import { computed, defineComponent } from "vue";
+  import { useLoginStore } from "@/stores/useLoginStore";
   import { useWindowSize } from "vue-window-size";
-  import Button from "../../components/button/Button.vue";
-  import Input from "../../components/input/Input.vue";
-  import Logo from "../../components/logo/Logo.vue";
-  import { useLoginStore } from "@/store/loginStore/loginStore";
+  import Button from "@/components/button/Button.vue";
+  import Input from "@/components/input/Input.vue";
+  import Logo from "@/components/logo/Logo.vue";
 
   export default defineComponent({
     components: {
@@ -14,6 +14,7 @@
     },
 
     setup() {
+      // Obtém o estado do login
       const loginStore = useLoginStore();
 
       // Obtém a largura da janela
@@ -31,6 +32,7 @@
         return width.value < 640 ? "md" : "xl";
       });
 
+      // Retorna as propriedades computadas para que elas possam ser usadas no modelo
       return {
         loginStore,
         responsiveButton,
@@ -41,10 +43,15 @@
 </script>
 
 <template>
+  <!-- página de login -->
   <div class="login-page">
+    <!-- login container -->
     <div class="container">
+      <!-- logo -->
       <Logo />
+      <!-- main box -->
       <div class="mainbox">
+        <!-- título -->
         <h1 class="mainbox--title">Entre na sua conta</h1>
         <p class="mainbox--subtitle">
           Para acessar sua conta, informe e-mail e password
@@ -69,6 +76,7 @@
           placeholder="Sua senha"
           @input="loginStore.setPassword($event.target.value)"
         />
+        <!-- botão de esqueci minha senha -->
         <div class="forgetbox">
           <a href="#" class="forgetbox--lost_password">Esqueci minha senha</a>
         </div>
@@ -82,6 +90,7 @@
         </div>
       </div>
       <div>
+        <!-- botão de cadastro -->
         <p class="whitout_account--text">
           Ainda não tem conta?
           <a class="whitout_account--join ." href="/plans">Cadastre-se</a>
