@@ -1,9 +1,10 @@
 <script lang="ts">
   import { computed, defineComponent, ref } from "vue";
+  import { useWindowSize } from "vue-window-size";
   import Button from "../../components/button/Button.vue";
   import Input from "../../components/input/Input.vue";
-  import { useWindowSize } from "vue-window-size";
   import Logo from "../../components/logo/Logo.vue";
+  import { useLoginStore } from "../../stores/useLoginStore";
 
   export default defineComponent({
     components: {
@@ -11,9 +12,11 @@
       Input,
       Logo,
     },
+
     setup() {
-      const email = ref("");
-      const senha = ref("");
+      const loginStore = useLoginStore();
+      const email = ref(loginStore.email);
+      const password = ref(loginStore.password);
 
       // Obtém a largura da janela
       const { width } = useWindowSize();
@@ -31,10 +34,11 @@
       });
 
       return {
+        loginStore,
         email,
         responsiveButton,
         responsiveInput,
-        senha,
+        password,
       };
     },
   });
@@ -47,7 +51,7 @@
       <div class="mainbox">
         <h1 class="mainbox--title">Entre na sua conta</h1>
         <p class="mainbox--subtitle">
-          Para acessar sua conta, informe e-mail e senha
+          Para acessar sua conta, informe e-mail e password
         </p>
         <!-- Usa a propriedade computada responsiveInput como valor para a propriedade size do input -->
         <Input
@@ -63,7 +67,7 @@
           class="mainbox--input_password"
           input-type="password"
           label="Senha"
-          v-model="senha"
+          v-model="password"
           :size="responsiveInput"
           placeholder="Sua senha"
         />
