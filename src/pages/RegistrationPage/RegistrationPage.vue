@@ -9,9 +9,7 @@
   import RegisterTitleVue from "./components/registertitle/RegisterTitle.vue";
   import SelectedPlan from "./components/selectplan/SelectedPlan.vue";
   import { useRoute } from "vue-router";
-  import { useWindowSize } from "vue-window-size";
   import { useRegisterStore } from "../../stores/useRegisterStore";
-  import FormField from "./components/userform/interfaces/UserFormTypes";
   import UserForm from "./components/userform/UserForm.vue";
 
   export default defineComponent({

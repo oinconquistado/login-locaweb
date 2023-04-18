@@ -36,7 +36,7 @@
           placeholder: "Informe seu nome completo",
           required: true,
           type: "text",
-          setter: (value) => registerStore.setName(value),
+          setter: (value: string) => registerStore.setName(value),
         },
         {
           label: "Celular",
@@ -45,7 +45,7 @@
           placeholder: "(99) 9 9999-9999",
           required: true,
           type: "text",
-          setter: (value) => registerStore.setPhone(value),
+          setter: (value: string) => registerStore.setPhone(value),
         },
         {
           label: "E-mail",
@@ -54,7 +54,7 @@
           placeholder: "Informe seu e-mail",
           required: true,
           type: "text",
-          setter: (value) => registerStore.setEmail(value),
+          setter: (value: string) => registerStore.setEmail(value),
         },
         {
           label: "Senha",
@@ -64,7 +64,7 @@
           required: true,
           type: "password",
           tooltip: "A senha deve conter no mínimo 8 caracteres.",
-          setter: (value) => registerStore.setPassword(value),
+          setter: (value: string) => registerStore.setPassword(value),
         },
         {
           label: "Confirmar senha",
@@ -73,7 +73,7 @@
           placeholder: "Confirme sua senha",
           required: true,
           type: "password",
-          setter: (value) => registerStore.setConfirmPassword(value),
+          setter: (value: string) => registerStore.setConfirmPassword(value),
         },
       ];
       return { formFields, responsiveInput, responsiveButton };
