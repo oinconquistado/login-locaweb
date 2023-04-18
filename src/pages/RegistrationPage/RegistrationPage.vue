@@ -11,7 +11,7 @@
   import { useRoute } from "vue-router";
   import { useWindowSize } from "vue-window-size";
   import { useRegisterStore } from "../../stores/useRegisterStore";
-  import FormField from "./interfaces/UserFormTypes";
+  import FormField from "./components/userform/interfaces/UserFormTypes";
   import UserForm from "./components/userform/UserForm.vue";
 
   export default defineComponent({

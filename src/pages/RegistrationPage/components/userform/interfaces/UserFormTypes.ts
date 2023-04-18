@@ -1,4 +1,4 @@
-import { inputTypes } from "../../../components/input/interface/InputInterface";}
+import { inputTypes } from "../../../../../components/input/interface/InputInterface";
 
 // declaração dos campos do formulário
 interface FormField {
@@ -7,7 +7,7 @@ interface FormField {
   name: string;
   placeholder: string;
   required: boolean;
-  type: inputTypes;
+  type: any;
   tooltip?: string;
   setter: (value: string) => void;
 }
