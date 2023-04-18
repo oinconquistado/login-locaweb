@@ -1,4 +1,4 @@
-import { InputProps } from "../types/InputInterface";
+import { InputProps } from "../types/InputTypes";
 
 const ValidateInputProps = (props: InputProps) => {
   // Verifica se a propriedade autocomplete é válida

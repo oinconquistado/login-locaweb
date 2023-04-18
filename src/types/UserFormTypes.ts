@@ -1,4 +1,4 @@
-import { inputTypes } from "../components/input/interface/InputInterface";
+import { inputTypes } from "./InputTypes";
 
 // declaração dos campos do formulário
 interface FormField {
