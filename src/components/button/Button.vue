@@ -2,7 +2,7 @@
   // Importa a função defineComponent do Vue
   import { computed, defineComponent } from "vue";
   // Importa os tipos de interface do botão
-  import * as Types from "@/types/ButtonInterfaces";
+  import * as Types from "@/types/ButtonTypes";
   // Importa as métricas de tamanho do botão
   import buttonMetrics from "@/data/buttonSizes";
   // Importa a função de validação das propriedades do botão

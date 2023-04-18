@@ -1,4 +1,4 @@
-import { ButtonMetrics } from "@/types/ButtonInterfaces";
+import { ButtonMetrics } from "@/types/ButtonTypes";
 
 // Define as métricas de tamanho do botão
 const buttonMetrics: ButtonMetrics = {

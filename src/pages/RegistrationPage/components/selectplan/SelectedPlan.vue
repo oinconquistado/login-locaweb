@@ -1,7 +1,7 @@
 <script lang="ts">
   // importações
   import { defineComponent } from "vue";
-  import { PlanProps } from "@/types/PlanColInterfaces";
+  import { PlanProps } from "@/types/PlanColTypes";
   import { plans } from "@/data/Plans";
   import Button from "@/components/button/Button.vue";
   import PlanCol from "@/components/plancol/PlanCol.vue";

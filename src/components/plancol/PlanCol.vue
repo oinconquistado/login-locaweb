@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { BenefitsHighlighted, Plan } from "@/types/PlanColInterfaces";
+  import { BenefitsHighlighted, Plan } from "@/types/PlanColTypes";
   import { defineComponent } from "vue";
   import Button from "@/components/button/Button.vue";
 
