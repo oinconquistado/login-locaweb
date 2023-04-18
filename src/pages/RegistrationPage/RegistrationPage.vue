@@ -1,6 +1,6 @@
 <script lang="ts">
   import { defineComponent } from "vue";
-  import { plans } from "../PlansPage/components/PlansContainer/data/Plans";
+  import { plans } from "../../data/Plans";
   import useRegisterStore from "@/stores/useRegisterStore";
   import { useRoute } from "vue-router";
   import Button from "../../components/button/Button.vue";

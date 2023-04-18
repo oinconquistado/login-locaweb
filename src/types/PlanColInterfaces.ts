@@ -49,6 +49,8 @@ type Plan = {
   supported_apps: SupportedApps;
 };
 
+type PlanProps = String | String[];
+
 // Todos os planos
 type Plans = {
   [plan: string]: Plan;
@@ -63,5 +65,6 @@ export type {
   PlanBenefits,
   PlanDetails,
   Plans,
+  PlanProps,
   SupportedApps,
 };

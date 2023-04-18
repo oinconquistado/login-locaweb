@@ -1,32 +1,31 @@
 <script lang="ts">
   // importações
   import { defineComponent } from "vue";
-  import { plans } from "../../../../data/Plans
-  import PlanCol from "../../../../components/plancol/PlanCol.vue";
-  import Button from "../../../../components/button/Button.vue";
+  import { PlanProps } from "@/types/PlanColInterfaces";
+  import { plans } from "@/data/Plans";
+  import Button from "@/components/button/Button.vue";
+  import PlanCol from "@/components/plancol/PlanCol.vue";
   import useRegisterStore from "@/stores/useRegisterStore";
-
-  type Plan = String | String[];
 
   export default defineComponent({
     props: {
       // plano escolhido
       plan: {
-        type: String || (Array as () => Plan),
         required: true,
+        type: String || (Array as () => PlanProps),
       },
     },
     // declaração dos componentes
     components: {
-      PlanCol,
       Button,
+      PlanCol,
     },
     setup() {
       // declaração do store
       const registerStore = useRegisterStore();
       return {
-        registerStore,
         plans,
+        registerStore,
       };
     },
   });
