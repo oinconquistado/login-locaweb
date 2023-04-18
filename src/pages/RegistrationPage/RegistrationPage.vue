@@ -123,7 +123,6 @@
         <form class="register-form" @submit.prevent="">
           <!-- formulário do usuário -->
           <!-- formulário de registro -->
-          {{ registerStore.getName }}
           <!-- itera sobre os campos do formulário -->
           <Input
             v-for="(field, index) in formFields"
