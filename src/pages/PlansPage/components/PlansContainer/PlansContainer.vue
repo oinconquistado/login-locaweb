@@ -2,7 +2,7 @@
   // importações
   import { defineComponent } from "vue";
   import PlanCol from "../../../../components/plancol/PlanCol.vue";
-  import { plans } from "./data/Plans";
+  import { plans } from "../../../../data/Plansdata/Plans";
 
   export default defineComponent({
     // declaração dos componentes

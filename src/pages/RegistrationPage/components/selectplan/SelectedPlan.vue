@@ -1,7 +1,7 @@
 <script lang="ts">
   // importações
   import { defineComponent } from "vue";
-  import { plans } from "../../../PlansPage/components/PlansContainer/data/Plans";
+  import { plans } from "../../../../data/Plans
   import PlanCol from "../../../../components/plancol/PlanCol.vue";
   import Button from "../../../../components/button/Button.vue";
   import useRegisterStore from "@/stores/useRegisterStore";

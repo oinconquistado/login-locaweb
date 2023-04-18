@@ -1,4 +1,4 @@
-import { Plans } from "../../../../../components/plancol/interface/PlanColInterfaces";
+import { Plans } from "@/types/PlanColInterfaces";
 
 export const plans: Plans = {
   plan1: {
