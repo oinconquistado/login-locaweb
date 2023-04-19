@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router"; // Importa as funções createRouter e createWebHistory do pacote vue-router
-import { LoginPage, PlansPage, RegistrationPage } from "@/pages"; // Importa as páginas de Login, Planos e Cadastro
+import { LoginPage, PlansPage, RegistrationPage, LoggedPage } from "@/pages"; // Importa as páginas de Login, Planos e Cadastro
 
 // routes
 const router = createRouter({
@@ -33,6 +33,16 @@ const router = createRouter({
       meta: {
         requiresAuth: false,
         title: "Planos",
+      },
+    },
+    {
+      // Rota para a página logada
+      path: "/logged",
+      name: "Logged",
+      component: LoggedPage,
+      meta: {
+        requiresAuth: true,
+        title: "Logged",
       },
     },
   ],

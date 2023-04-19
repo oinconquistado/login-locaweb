@@ -1,0 +1,29 @@
+@media (max-width: 460px) {
+  .footer-text {
+    text-align: center;
+  }
+  .logged_footer {
+    width: 70vw;
+  }
+  .video--iframe {
+    width: 400px;
+    height: 200px;
+  }
+  .video_container-titles {
+    padding-bottom: 32px;
+    width: 400px;
+  }
+}
+
+@media (max-width: 750px) {
+  .logged_footer {
+    width: 70vw;
+  }
+  .video--iframe {
+    height: 400px;
+    width: 600px;
+  }
+  .video_container-titles {
+    width: 600px;
+  }
+}

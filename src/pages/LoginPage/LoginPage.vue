@@ -83,11 +83,13 @@
         </div>
         <div class="login_container">
           <!-- Usa a propriedade computada responsiveButton como valor para a propriedade size do botão -->
-          <Button
-            button_msg="fazer login"
-            variant="cta"
-            :size="responsiveButton"
-          />
+          <router-link :to="`/logged`">
+            <Button
+              button_msg="fazer login"
+              variant="cta"
+              :size="responsiveButton"
+            />
+          </router-link>
         </div>
       </div>
       <div>
