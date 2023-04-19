@@ -2,10 +2,11 @@
   // importação dos componentes e bibliotecas
   import { defineComponent } from "vue";
   // componentes
-  import { Logo, Slogan } from "@/components/";
+  import { Logo, Slogan } from "@/components";
 
   export default defineComponent({
     // propriedades do header
+    components: { Logo, Slogan },
     props: {
       cta: {
         default: "",
@@ -24,7 +25,6 @@
       return {};
     },
     // importação dos componentes
-    components: { Logo, Slogan },
   });
 </script>
 <template>

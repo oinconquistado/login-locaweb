@@ -1,5 +1,6 @@
 import LoginPage from "@/pages/LoginPage/LoginPage.vue";
-import PlansPage from "./PlansPage/PlansPage.vue";
-import RegistrationPage from "./RegistrationPage/RegistrationPage.vue";
+import PlansPage from "@/pages/PlansPage/PlansPage.vue";
+import RegistrationPage from "@/pages/RegistrationPage/RegistrationPage.vue";
+import LoggedPage from "@/pages/LoggedPage/LoggedPage.vue";
 
-export { LoginPage, PlansPage, RegistrationPage };
+export { LoggedPage, LoginPage, PlansPage, RegistrationPage };
