@@ -148,6 +148,6 @@
     </div>
   </form>
 </template>
-<style>
+<style scoped>
   @import url("./style/UserFormStyle.css");
 </style>

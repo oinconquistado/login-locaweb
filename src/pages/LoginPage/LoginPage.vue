@@ -101,7 +101,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
   @import "./style/LoginPage.css";
   @import "./style/LoginPageMobile.css";
 </style>
