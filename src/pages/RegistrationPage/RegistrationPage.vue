@@ -1,13 +1,13 @@
 <script lang="ts">
-  import { Button, FormDivider, Header, Input, PlanCol } from "@/components/";
+  // importação das bibliotecas
   import { defineComponent } from "vue";
-  import { plans } from "../../data/Plans";
   import { useRoute } from "vue-router";
-
-  import RegisterTitleVue from "./components/registertitle/RegisterTitle.vue";
-  import SelectedPlan from "./components/selectplan/SelectedPlan.vue";
-  import UserForm from "./components/userform/UserForm.vue";
-  //
+  // importação dos componentes
+  import { Button, FormDivider, Header, Input, PlanCol } from "@/components/";
+  import { plans } from "@/data/Plans";
+  // pages components
+  import { RegisterTitle, SelectedPlan, UserForm } from "@/pages/components";
+  //stores
   import { useRegisterStore } from "@/stores";
 
   export default defineComponent({
@@ -18,7 +18,7 @@
       Header,
       Input,
       PlanCol,
-      RegisterTitleVue,
+      RegisterTitle,
       SelectedPlan,
       UserForm,
     },
@@ -50,7 +50,7 @@
     <div class="register_container">
       <div class="register_container-box_register">
         <!-- títulos da página de registro -->
-        <RegisterTitleVue />
+        <RegisterTitle />
         <!-- formulário de registro -->
         <UserForm />
       </div>

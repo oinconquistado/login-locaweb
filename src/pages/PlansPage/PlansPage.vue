@@ -1,14 +1,14 @@
 <script lang="ts">
   // importação dos componentes
   import { defineComponent } from "vue";
-  import PlansContainer from "./components/PlansContainer/PlansContainer.vue";
-  import Header from "../../components/header/Header.vue";
+  import { Header } from "@/components";
+  import { PlansContainer } from "@/pages/components";
 
   export default defineComponent({
     // declaração dos componentes
     components: {
-      PlansContainer,
       Header,
+      PlansContainer,
     },
     setup() {
       return {};
