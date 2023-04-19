@@ -9,7 +9,7 @@ const router = createRouter({
       // Rota para a página de login
       path: "/",
       name: "Login",
-      component: LoginPageVue,
+      component: LoginPage,
       meta: {
         requiresAuth: false,
         title: "Login",
