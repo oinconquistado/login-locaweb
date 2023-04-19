@@ -1,11 +1,14 @@
 <script lang="ts">
-  // importações
+  // bibliotecas
   import { defineComponent } from "vue";
+  // tipos
   import { PlanProps } from "@/types/PlanColTypes";
+  // dados
   import { plans } from "@/data/Plans";
-  import Button from "@/components/button/Button.vue";
-  import PlanCol from "@/components/plancol/PlanCol.vue";
-  import useRegisterStore from "@/stores/useRegisterStore";
+  // componentes
+  import { Button, PlanCol } from "@/components";
+  // store
+  import { useRegisterStore } from "@/stores";
 
   export default defineComponent({
     props: {

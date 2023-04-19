@@ -1,8 +1,8 @@
 <script lang="ts">
   // importação dos componentes e bibliotecas
   import { defineComponent } from "vue";
-  import Logo from "@/components/logo/Logo.vue";
-  import Slogan from "@/components/slogan/Slogan.vue";
+  // componentes
+  import { Logo, Slogan } from "@/components/";
 
   export default defineComponent({
     // propriedades do header

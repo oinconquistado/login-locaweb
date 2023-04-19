@@ -1,13 +1,10 @@
 import { createRouter, createWebHistory } from "vue-router"; // Importa as funções createRouter e createWebHistory do pacote vue-router
-import LoginPageVue from "@/pages/LoginPage/LoginPage.vue"; // Importa o componente LoginPageVue de um caminho relativo usando um alias
-import PlansPage from "@/pages/PlansPage/PlansPage.vue"; // Importa o componente PlansPage de um caminho relativo usando um alias
-import RegistrationPage from "@/pages/RegistrationPage/RegistrationPage.vue"; // Importa o componente RegistrationPage de um caminho relativo usando um alias
+import { LoginPage, PlansPage, RegistrationPage } from "@/pages"; // Importa as páginas de Login, Planos e Cadastro
 
 // routes
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL), // Define a configuração de histórico e URL base para o roteador
   routes: [
-    // Public
     {
       // Rota para a página de login
       path: "/",
@@ -19,16 +16,6 @@ const router = createRouter({
       },
     },
     {
-      // Rota para a página de planos
-      path: "/plans",
-      name: "Plans",
-      component: PlansPage,
-      meta: {
-        requiresAuth: false,
-        title: "Planos",
-      },
-    },
-    {
       // Rota para a página de cadastro
       path: "/register/:id",
       name: "Cadastro",
@@ -36,6 +23,16 @@ const router = createRouter({
       meta: {
         requiresAuth: false,
         title: "Register",
+      },
+    },
+    {
+      // Rota para a página de planos
+      path: "/plans",
+      name: "Plans",
+      component: PlansPage,
+      meta: {
+        requiresAuth: false,
+        title: "Planos",
       },
     },
   ],

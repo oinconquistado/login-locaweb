@@ -4,7 +4,7 @@
   // Importa os tipos de interface do botão
   import * as Types from "@/types/ButtonTypes";
   // Importa as métricas de tamanho do botão
-  import buttonMetrics from "@/data/buttonSizes";
+  import buttonMetrics from "@/data/ButtonSizes.js";
   // Importa a função de validação das propriedades do botão
   import ValidateButtonProps from "@/utils/ValidateButtonProps";
 

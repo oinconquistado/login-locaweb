@@ -1,6 +1,6 @@
+import { api } from "@/services"; // Importa um módulo personalizado de uma API
 import { Method } from "axios"; // Importa o tipo de método do pacote axios
 import { useQuery } from "@tanstack/vue-query"; // Importa uma função de uma biblioteca chamada vue-query
-import api from "@/services/api/api"; // Importa um módulo personalizado de uma API
 
 // Classe construtora para requisição de dados
 export default class {

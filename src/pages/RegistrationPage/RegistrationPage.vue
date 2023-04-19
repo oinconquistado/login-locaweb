@@ -1,16 +1,14 @@
 <script lang="ts">
+  import { Button, FormDivider, Header, Input, PlanCol } from "@/components/";
   import { defineComponent } from "vue";
   import { plans } from "../../data/Plans";
-  import useRegisterStore from "@/stores/useRegisterStore";
   import { useRoute } from "vue-router";
-  import Button from "../../components/button/Button.vue";
-  import FormDivider from "../../components/formdivider/FormDivider.vue";
-  import Header from "../../components/header/Header.vue";
-  import Input from "../../components/input/Input.vue";
-  import PlanCol from "../../components/plancol/PlanCol.vue";
+
   import RegisterTitleVue from "./components/registertitle/RegisterTitle.vue";
   import SelectedPlan from "./components/selectplan/SelectedPlan.vue";
   import UserForm from "./components/userform/UserForm.vue";
+  //
+  import { useRegisterStore } from "@/stores";
 
   export default defineComponent({
     // declaração dos componentes

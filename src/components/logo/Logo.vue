@@ -14,9 +14,9 @@
   <div class="container__logo-plans--logobox">
     <!-- logo da locaweb -->
     <img
-      src="../../assets/images/locaweb.svg"
-      class="container__logo-plans--logobox--locaweb"
       alt="Logo da Locaweb"
+      class="container__logo-plans--logobox--locaweb"
+      src="@/assets/images/locaweb.svg"
     />
   </div>
 </template>

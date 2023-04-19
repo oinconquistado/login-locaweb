@@ -13,6 +13,6 @@
   <!-- container do divider -->
   <div class="form_diviver">
     <!-- divider -->
-    <img src="@/assets/icons/divider-large.svg" alt="" />
+    <img src="@/assets/divider-large.svg" alt="" />
   </div>
 </template>

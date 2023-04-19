@@ -1,11 +1,11 @@
 <script lang="ts">
   import { computed, defineComponent } from "vue";
   import { useWindowSize } from "vue-window-size";
-  import Button from "@/components/button/Button.vue";
-  import FormDivider from "@/components/formdivider/FormDivider.vue";
+  import { Button, FormDivider, Input } from "@/components";
+  // types
   import FormField from "@/types/UserFormTypes";
-  import Input from "@/components/input/Input.vue";
-  import useRegisterStore from "@/stores/useRegisterStore";
+  // stores
+  import { useRegisterStore } from "@/stores";
 
   export default defineComponent({
     components: {
@@ -15,9 +15,6 @@
     },
 
     setup() {
-      // declaração do store
-      const registerStore = useRegisterStore();
-
       // Obtém a largura da janela
       const responsiveButton = computed(() => {
         // Retorna "xs" se a largura da janela for menor que 640px e "xl" caso contrário
@@ -28,6 +25,9 @@
         // Retorna "small" se a largura da janela for menor que 640px e "large" caso contrário
         return width.value > 640 ? "medium" : "small";
       });
+
+      // declaração do store
+      const registerStore = useRegisterStore();
 
       const { width } = useWindowSize();
       // Define uma propriedade computada para o tamanho responsivo do input
@@ -104,7 +104,7 @@
       v-for="(field, index) in formFields"
     />
     <!-- divider -->
-    <FormDividerrmDivider />
+    <FormDivider />
 
     <!-- segunda seção -->
     <div class="website_register">

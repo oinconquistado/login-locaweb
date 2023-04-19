@@ -1,72 +1,72 @@
 <script lang="ts">
   import { defineComponent } from "vue";
-  import * as Types from "../../types/InputInterface";
-  import sizeStyles from "../../data/inputSizesizes";
+  import * as Types from "../../types/InputTypes";
+  import sizeStyles from "@/data/InputSizes";
   import ValidateInputProps from "@/utils/ValidateButtonProps";
 
   export default defineComponent({
     // Define as propriedades do componente
     props: {
       autocomplete: {
-        type: String as () => Types.autocompleteStatus,
         default: "off",
+        type: String as () => Types.autocompleteStatus,
       },
       description: {
-        type: String,
         default: "",
+        type: String,
       },
       descriptionIsVisible: {
-        type: Boolean,
         default: false,
+        type: Boolean,
       },
       inputType: {
-        type: String as () => Types.inputTypes,
         required: true,
+        type: String as () => Types.inputTypes,
       },
       isDisabled: {
-        type: Boolean,
         default: false,
+        type: Boolean,
       },
       isReadOnly: {
-        type: Boolean,
         default: false,
+        type: Boolean,
       },
       isRequired: {
-        type: Boolean,
         default: false,
+        type: Boolean,
       },
       label: {
-        type: String,
         required: true,
+        type: String,
       },
       maxLength: {
-        type: String,
         default: "",
+        type: String,
       },
       minLength: {
-        type: String,
         default: "",
+        type: String,
       },
 
       placeholder: {
-        type: String,
         default: "",
+        type: String,
       },
       size: {
-        type: String as () => Types.sizesOfInputs,
         default: "small",
+        type: String as () => Types.sizesOfInputs,
       },
       tabIndex: {
-        type: Number,
         default: 0,
+        type: Number,
       },
       tooltip: {
-        type: String,
         default: "",
+        type: String,
       },
       setter: {
-        type: Function,
         default: () => {},
+        type: Function,
       },
     },
 

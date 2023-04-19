@@ -1,10 +1,11 @@
 <script lang="ts">
+  // outras bibliotecas
   import { computed, defineComponent } from "vue";
   import { useWindowSize } from "vue-window-size";
-  import Button from "@/components/button/Button.vue";
-  import Input from "@/components/input/Input.vue";
-  import Logo from "@/components/logo/Logo.vue";
-  import useLoginStore from "@/stores/useLoginStore";
+  // componentes
+  import { Button, Input, Logo } from "@/components";
+  // store
+  import { useLoginStore } from "@/stores";
 
   export default defineComponent({
     components: {
