@@ -55,5 +55,5 @@
 
 <!-- Importa o arquivo de estilo CSS -->
 <style scoped>
-  @import "@/style/ButtonStyle.css";
+  @import url("@/style/ButtonStyle.css");
 </style>
